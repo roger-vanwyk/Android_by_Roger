@@ -4,6 +4,12 @@ package android.tangleddroid.roger;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.tangleddroid.roger.card.CardActivity;
+import android.tangleddroid.roger.guide.GuideActivity;
+import android.tangleddroid.roger.musical.MusicActivity;
+import android.tangleddroid.roger.news.NewsActivity;
+import android.tangleddroid.roger.quiz.QuizActivity;
+import android.tangleddroid.roger.scorekeeper.ScorekeeperActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +18,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
-
-import com.example.roger.card.CardActivity;
-import com.example.roger.guide.GuideActivity;
-import com.example.roger.musical.MusicActivity;
-import com.example.roger.news.NewsActivity;
-import com.example.roger.quiz.QuizActivity;
-import com.example.roger.scorekeeper.ScorekeeperActivity;
 
 import java.util.ArrayList;
 

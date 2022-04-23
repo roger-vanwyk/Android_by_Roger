@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:content=".CardActivity">
+
+    <!--    Copyright 2019 by Roger van Wyk, Project #1
+
+         Android Basic Nanodegree course - by Google's Udacity
+
+                 Scholarship grant from AAL & Google
+
+  *Note* This activity.main.xml is for portrait screen orientation  -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- Don't Cook header -->
+
+        <ImageView
+            android:id="@+id/about_dc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/aboutdc_image_view"
+            android:src="@drawable/aboutdc" />
+
+        <!-- Don't Cook business logo -->
+
+        <ImageView
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="260dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="70dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/dontcook_image_view"
+            android:src="@drawable/dontcook" />
+
+        <!-- Business address TextView -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="55dp"
+            android:text="@string/address"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <!-- Button opens "about us" section of the business -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/about_us"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            tools:ignore="RelativeOverlap" />
+
+        <!-- Button opens a map to direct user to the business -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/visit_us"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            tools:ignore="RelativeOverlap" />
+
+        <!-- Business' operating hours -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_dc"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="300dp"
+            android:padding="60dp"
+            android:text="@string/ops_hrs"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

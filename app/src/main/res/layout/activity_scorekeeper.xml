@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".scorekeeper.ScorekeeperActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A4D8EF"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TeamTitleStyle"
+                    android:text="@string/team_a" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        style="@style/ScoreTextViewStyle"
+                        android:text="@string/team_score" />
+
+                    <TextView
+                        android:id="@+id/team_a_wicket"
+                        style="@style/WicketTextViewStyle"
+                        android:text="@string/team_wicket" />
+                </LinearLayout>
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="addSixforTeamA"
+                    android:text="@string/plus_six_runs"
+                    tools:ignore="DuplicateSpeakableTextCheck,UsingOnClickInXml" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="addFourforTeamA"
+                    android:text="@string/plus_four_runs"
+                    tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,UsingOnClickInXml" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="addOneforTeamA"
+                    android:text="@string/plus_one_run"
+                    tools:ignore="DuplicateSpeakableTextCheck,UsingOnClickInXml" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="addWicketforTeamA"
+                    android:text="@string/plus_one_wicket"
+                    tools:ignore="DuplicateSpeakableTextCheck,UsingOnClickInXml" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TeamTitleStyle"
+                    android:text="@string/team_b" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        style="@style/ScoreTextViewStyle"
+                        android:text="@string/team_score" />
+
+                    <TextView
+                        android:id="@+id/team_b_wicket"
+                        style="@style/WicketTextViewStyle"
+                        android:text="@string/team_wicket" />
+                </LinearLayout>
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="addSixforTeamB"
+                    android:text="@string/plus_six_runs"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="addFourforTeamB"
+                    android:text="@string/plus_four_runs"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="addOneforTeamB"
+                    android:text="@string/plus_one_run"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="addWicketforTeamB"
+                    android:text="@string/plus_one_wicket"
+                    tools:ignore="UsingOnClickInXml" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/bg_cricket_two">
+
+            <Button
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:onClick="resetScore"
+                android:text="@string/reset"
+                tools:ignore="UsingOnClickInXml" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

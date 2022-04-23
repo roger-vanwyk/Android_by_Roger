@@ -1,4 +1,4 @@
-package android.tangleddroid.roger;
+package android.tangleddroid.roger.guide;
 
 /*Created 12/2019 by rogervw*/
 
@@ -11,16 +11,16 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 @SuppressWarnings("ALL")
-public class CategoryAdapter extends FragmentPagerAdapter {
+public class GuideCategoryAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
 
     /**
-     * Create a {@link CategoryAdapter} object.
+     * Create a {@link GuideCategoryAdapter} object.
      *
      * @param fm stands for the fragment manager that keeps the state in the adapter when being swiped.
      */
-    public CategoryAdapter(Context context, FragmentManager fm) {
+    public GuideCategoryAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -31,15 +31,15 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new JavaFragment();
+            return new GuideSightsFragment();
         } else if (position == 1) {
-            return new AttractionsFragment();
+            return new GuideAttractionsFragment();
         } else if (position == 2) {
-            return new FoodFragment();
+            return new GuideFoodFragment();
         } else if (position == 3) {
-            return new AccommodationFragment();
+            return new GuideAccommodationFragment();
         } else {
-            return new EventsFragment();
+            return new GuideEventsFragment();
         }
     }
 
@@ -57,7 +57,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return "ABND";
+            return "Sights";
         } else if (position == 1) {
             return "Activities";
         } else if (position == 2) {

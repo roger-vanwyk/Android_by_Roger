@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="android:windowContentOverlay">@null</item>
+    </style>
         <!-- Customize your main app theme here. -->
         <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
             <item name="android:maxHeight">@dimen/abc_action_bar_default_height_material</item>
@@ -127,5 +128,4 @@
             <item name="android:layout_gravity">center_horizontal</item>
         </style>
 
-    </style>
 </resources>
