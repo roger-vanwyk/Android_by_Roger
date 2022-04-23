@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name_text_view"
+        style="@style/CardViewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_view_text_margin_left"
+        android:layout_marginLeft="@dimen/card_view_text_margin_left"
+        android:layout_marginTop="@dimen/card_view_text_margin_top"
+        android:layout_marginBottom="@dimen/card_view_text_margin_bottom"
+        android:textAppearance="?android:textAppearanceMedium"
+        tools:text="name" />
+
+    <TextView
+        android:id="@+id/details_text_view"
+        style="@style/CardViewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_view_text_margin_left"
+        android:layout_marginLeft="@dimen/card_view_text_margin_left"
+        tools:text="details" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_view_margin"
+        card_view:cardCornerRadius="@dimen/card_view_corner_radius"
+        card_view:cardElevation="@dimen/card_view_elevation">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_view_image_height"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image_description"
+                android:scaleType="centerCrop"
+                android:src="@drawable/rogvw" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_view_image_height"
+                android:background="@color/opaque"
+                android:contentDescription="@string/image_background_description" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
