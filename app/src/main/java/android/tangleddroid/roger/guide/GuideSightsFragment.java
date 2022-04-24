@@ -61,26 +61,26 @@ public class GuideSightsFragment extends Fragment {
 
         // Creates a list of sights
         final ArrayList<GuideInfo> guideInfo = new ArrayList<GuideInfo>();
-        guideInfo.add(new GuideInfo(getContext().getString(R.string.sights_one_name),
-                getContext().getString(R.string.sights_one_details),
+        guideInfo.add(new GuideInfo(getContext().getString(R.string.sight_one_name),
+                getContext().getString(R.string.sight_one_details),
                 R.drawable.south_africa_cpt,
-                getContext().getString(R.string.sights_one_description),
-                getContext().getString(R.string.sights_one_location)));
-        guideInfo.add(new GuideInfo(getContext().getString(R.string.sights_two_name),
-                getContext().getString(R.string.sights_two_details),
+                getContext().getString(R.string.sight_one_description),
+                getContext().getString(R.string.sight_one_location)));
+        guideInfo.add(new GuideInfo(getContext().getString(R.string.sight_two_name),
+                getContext().getString(R.string.sight_two_details),
                 R.drawable.durban_waterfront,
-                getContext().getString(R.string.sights_two_description),
-                getContext().getString(R.string.sights_two_location)));
-        guideInfo.add(new GuideInfo(getContext().getString(R.string.sights_three_name),
-                getContext().getString(R.string.sights_three_details),
+                getContext().getString(R.string.sight_two_description),
+                getContext().getString(R.string.sight_two_location)));
+        guideInfo.add(new GuideInfo(getContext().getString(R.string.sight_three_name),
+                getContext().getString(R.string.sight_three_details),
                 R.drawable.drakensberg,
-                getContext().getString(R.string.sights_three_description),
-                getContext().getString(R.string.sights_three_location)));
-        guideInfo.add(new GuideInfo(getContext().getString(R.string.sights_four_name),
-                getContext().getString(R.string.sights_four_details),
+                getContext().getString(R.string.sight_three_description),
+                getContext().getString(R.string.sight_three_location)));
+        guideInfo.add(new GuideInfo(getContext().getString(R.string.sight_four_name),
+                getContext().getString(R.string.sight_four_details),
                 R.drawable.blyde_river_canyon,
-                getContext().getString(R.string.sights_four_description),
-                getContext().getString(R.string.sights_four_location)));
+                getContext().getString(R.string.sight_four_description),
+                getContext().getString(R.string.sight_four_location)));
 
         // Create an {@link InfoAdapter} and populates with data sourced from {@link Info}.
         GuideInfoAdapter adapter = new GuideInfoAdapter(getActivity(), guideInfo);
