@@ -11,10 +11,12 @@
         style="@style/CategoryTab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"
         app:tabMode="scrollable" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo" />
 </LinearLayout>
