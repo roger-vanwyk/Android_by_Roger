@@ -45,7 +45,7 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/image_description"
                 android:scaleType="centerCrop"
-                android:src="@drawable/rogvw" />
+                android:src="@drawable/ic_rog_bw" />
 
             <ImageView
                 android:layout_width="match_parent"

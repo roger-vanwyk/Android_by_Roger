@@ -135,8 +135,11 @@
     <!--    Images' descriptions-->
     <string name="image_description">cape_image</string>
     <string name="image_background_description">Background for opaque image</string>
+    <string name="actions">Actions</string>
+    <string name="phone_contact">Phone Contact</string>
+    <string name="mail_contact">Email Contact</string>
 
-<!--    &lt;!&ndash;    First tab: Sights&ndash;&gt;-->
+    <!--    &lt;!&ndash;    First tab: Sights&ndash;&gt;-->
 <!--    <string name="sights_one_name">Cape Peninsula</string>-->
 <!--    <string name="sights_one_details">Mountains and Beaches</string>-->
 <!--    <string name="sights_one_description">The mother city is home to various tourist attractions and-->
