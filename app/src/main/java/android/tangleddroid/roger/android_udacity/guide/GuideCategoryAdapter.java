@@ -1,4 +1,4 @@
-package android.tangleddroid.roger;
+package android.tangleddroid.roger.android_udacity.guide;
 
 /*Created 12/2019 by rogervw*/
 
@@ -11,16 +11,16 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 @SuppressWarnings("ALL")
-public class CategoryAdapter extends FragmentPagerAdapter {
+public class GuideCategoryAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
 
     /**
-     * Create a {@link CategoryAdapter} object.
+     * Create a {@link GuideCategoryAdapter} object.
      *
      * @param fm stands for the fragment manager that keeps the state in the adapter when being swiped.
      */
-    public CategoryAdapter(Context context, FragmentManager fm) {
+    public GuideCategoryAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -31,16 +31,15 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new JavaFragment();
-//            Temporarily decreasing number of category tabs display
-        /*} else if (position == 1) {
-            return new AttractionsFragment();
+            return new GuideSightsFragment();
+        } else if (position == 1) {
+            return new GuideAttractionsFragment();
         } else if (position == 2) {
-            return new FoodFragment();
+            return new GuideFoodFragment();
         } else if (position == 3) {
-            return new AccommodationFragment();*/
+            return new GuideAccommodationFragment();
         } else {
-            return new DrawingsFragment();
+            return new GuideEventsFragment();
         }
     }
 
@@ -49,8 +48,8 @@ public class CategoryAdapter extends FragmentPagerAdapter {
      */
     @Override
     public int getCount() {
-        return 2;
-    }  // Original number = 5
+        return 5;
+    }
 
     /**
      * Provides the titles in the {@link TabLayout} for each fragment.
@@ -58,15 +57,15 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return "Android Java";
-        /*} else if (position == 1) {
-            return "Kotlin";
+            return "Sights";
+        } else if (position == 1) {
+            return "Activities";
         } else if (position == 2) {
-            return "Other";
+            return "Food";
         } else if (position == 3) {
-            return "Certifications";*/
+            return "Accommodation";
         } else {
-            return "Drawings";
+            return "Events";
         }
     }
 }

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="android.tangleddroid.roger">
-
-<!--    Add internet permission-->
+    <!-- Add internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,59 +12,62 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidPortfolio">
         <activity
+            android:name=".IntroActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".DetailsActivity"
+            android:label="@string/details_activity"
+            android:parentActivityName=".MainActivity">
 
-    <activity android:name="android.tangleddroid.roger.DetailsActivity"
-        android:label="@string/details_activity"
-        android:parentActivityName="android.tangleddroid.roger.MainActivity">
-        <!-- Meta-data element for versions lower than 4.1 -->
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="android.tangleddroid.roger.MainActivity" />
-    </activity>
-    <activity
-        android:name=".ScrollingActivity"
-        android:exported="true"
-        android:label="@string/about"
-        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-    </activity>
-    <activity
-        android:name="android.tangleddroid.roger.news.NewsActivity"
-        android:exported="false" />
-    <activity
-        android:name="android.tangleddroid.roger.guide.GuideActivity"
-        android:exported="false" />
-    <activity
-        android:name="android.tangleddroid.roger.guide.GuideDetailsActivity"
-        android:exported="false" />
-    <activity
-        android:name="android.tangleddroid.roger.musical.MusicActivity"
-        android:exported="false" />
-    <activity
-        android:name="android.tangleddroid.roger.musical.MusicViewerActivity"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-    <activity
-        android:name="android.tangleddroid.roger.musical.MusicNowPlayingActivity"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-    <activity
-        android:name="android.tangleddroid.roger.musical.MusicAlbumActivity"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-    <activity
-        android:name="android.tangleddroid.roger.quiz.QuizActivity"
-        android:exported="false" />
-    <activity
-        android:name="android.tangleddroid.roger.scorekeeper.ScorekeeperActivity"
-        android:exported="false" />
-    <activity
-        android:name="android.tangleddroid.roger.card.CardActivity"
-        android:exported="false" />
-</application>
+            <!-- Meta-data element for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.tangleddroid.roger.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:exported="true"
+            android:label="@string/about"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".android_udacity.news.NewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".android_udacity.guide.GuideActivity"
+            android:exported="false" />
+        <activity
+            android:name=".android_udacity.guide.GuideDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".android_udacity.musical.MusicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".android_udacity.musical.MusicViewerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".android_udacity.musical.MusicNowPlayingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".android_udacity.musical.MusicAlbumActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".android_udacity.quiz.QuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".android_udacity.scorekeeper.ScorekeeperActivity"
+            android:exported="false" />
+        <activity
+            android:name=".android_udacity.card.CardActivity"
+            android:exported="false" />
+    </application>
 
 </manifest>

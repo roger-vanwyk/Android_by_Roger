@@ -4,12 +4,12 @@ package android.tangleddroid.roger;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.tangleddroid.roger.card.CardActivity;
-import android.tangleddroid.roger.guide.GuideActivity;
-import android.tangleddroid.roger.musical.MusicActivity;
-import android.tangleddroid.roger.news.NewsActivity;
-import android.tangleddroid.roger.quiz.QuizActivity;
-import android.tangleddroid.roger.scorekeeper.ScorekeeperActivity;
+import android.tangleddroid.roger.android_udacity.card.CardActivity;
+import android.tangleddroid.roger.android_udacity.guide.GuideActivity;
+import android.tangleddroid.roger.android_udacity.musical.MusicActivity;
+import android.tangleddroid.roger.android_udacity.news.NewsActivity;
+import android.tangleddroid.roger.android_udacity.quiz.QuizActivity;
+import android.tangleddroid.roger.android_udacity.scorekeeper.ScorekeeperActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,7 +73,7 @@ public class JavaFragment extends Fragment {
                 getContext().getString(R.string.java_one_details),
 //                R.drawable.south_africa_cpt,
                 R.drawable.proj1,
-                getContext().getString(R.string.sight_one_description),
+                getContext().getString(R.string.java_one_description),
                 getContext().getString(R.string.java_one_location)));
         info.add(new Info(getContext().getString(R.string.java_two_name),
                 getContext().getString(R.string.java_two_details),

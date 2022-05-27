@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidPortfolio</string>
+    <string name="app_name">Android by Roger</string>
 
     <!--    STRINGS FOR THE MAIN APPLICATION-->
     <string name="todo">TODO</string>
@@ -20,116 +20,163 @@
     <string name="credentials">Credentials</string>
     <string name="join">Join</string>
     <string name="large_text">
-        "Android Basics Nanodegree.\n\n"
+        "Program Syllabus"\n
 
-        "After successfully completing my study grant from Google LLC in partnership with the African"
-        "App Launchpad (AAL) I decided to put my newly acquired skills to the test by building this app"
-        "to demonstrate what I've learned, and how I put it onto practice.\n"
-        "My idea is to show the user(s) my capabilities, creativity, and problem solving skills."
-        "My reasoning is that this project might serve as motivation to afford me a chance at entering "
-        "the tech environment, preferably, but not limited to Mobile(Android) development.\n"
-        "As I am making this career change from a fifteen years military Air Traffic Management environment, I do believe that"
-        "I come with fundamental soft skills and both leadership and mentoring skills to be beneficial "
-        "to your team.\n\n"
+"This program is divided into 5 parts and 6 projects you need to complete in order to receive your certificate."\n\n
 
-        "Project 1: Business Card.\n\n"
+PART 1: Welcome to the Nanodegree\n
+An introduction to your Nanodegree program.\n\n
 
-        "This simple app focus on the user interface similar to the many "build your first app" tutorials"
-        "available around the world wide web. It does not react to button clicks.\n\n"
+PART 2: User Interface\n
+Learn how to transform your hand-drawn app designs into layouts using the XML markup language, and use Views and ViewGroups — the building blocks of an Android app\'s user interface — to display images and text.\n\n
 
-        "Project 2: Scorekeeper.\n\n"
+        Project 1: Build a Single Screen App\n\n
 
-        "The app keeps track of the score between 2 cricket teams, by reacting to button clicks. "
-        "Thus both user interface and user input are displayed.\n\n"
+PART 3: User Input\n
+Harness the power of Java to build a coffee-ordering app, use variables to add interactivity to your app, and learn the basics of object-oriented programming.\n\n
 
-        "Project 3: Quiz.\n\n"
+        Project 2: Score Keeper App\n
 
-        "This app make use of Radio Buttons, EditText, and other view widgets to quiz the user(s) on"
-        "a variety of Chess openings.\n\n"
+        Project 3: Quiz App\n\n
 
-        "Project 4: Musical Structure.\n\n"
+PART 4: Multi-Screen Apps\n
+Learn how to show multiple screens in a Miwok language app, and add audio and images to your app. You\'ll also learn how Android handles touch events, and make visual changes to add polish to your fully functional app.\n\n
 
-        "As the name suggest, only the structure of an Android music player app is displayed, without the "
-        "ability to actually play said music. It is build using Activities, Fragments, and do not require much.\n"
-        "logic to the business end to actually make it work.\n\n"
+        Project 4: Musical Structure App\n
 
-        "Project 5: Tour Guide.\n\n"
+        Project 5: Tour Guide App\n\n
 
-        "A multiscreen app that serves as a digital quick reference to touring around South Africa. "
-        "Here I made use of a ListView and Adapter to populate the screens with relavent information.\n\n"
+PART 5: Networking"\n
+Discover the power of Web APIs and how to use them in your apps, and learn the basics of networking in Android, including HTTP networking, JSON parsing, and threads.\n\n
 
-        "Project 6: Networking.\n\n"
-
-        "This app connects to the internet in order to retrieve data from APIs and parsing its response "
-        "to populate a RecyclerView as opposed to a ListView.\n\n"
-
-        "Please not that the data displayed are from the Guardian API copied and stored online, due\n"
-        "to this project being a demo and me not wanting to make unnecessary network calls, as with \n"
-        "the original project code.\n\n"
-
-        "A final word.\n\n"
-
-        "I am well experienced with Android Studio, and most of its functionality, including,but not \n\n"
-        "limited to debugging, version control, and obviously the general process of developing.\n"
-        "I code in Java and Kotlin, and is now familiarizing myself with Flutter.\n\n"
-        "I am also comfortable using IntelliJ IDEA and Android Studio Canary.\n\n"
-
-        "Operating Systems I use include Windows, Linux, and Android x86 to name a few.\n "
-        "Unfortunately I do not own a MAC yet, which is also the main reason I have'nt started \n"
-        "developing for iOS yet.\n\n"
-
-        "I am aware of my shortcomings with regard to the broader spectrum of computer science, by "
-        "means of qualification,but do make use of various online platforms to gain the necessary \n"
-        "knowledge which will definitely help me throughout this venture.\n\n "
+        Project 6: News App\n
     </string>
 
     <!--    Java Projects-->
-    <string name="java_one_name">Business Card</string>
-    <string name="java_one_details">User Interface</string>
-    <string name="java_one_description">The mother city is home to various tourist attractions and
-        South Africa\'s most popular holiday destination.
-        Table Mountain, Lion\'s Head, and Cape Point offers hiking, paragliding, cable cart rides, and spectacular
-        views over the city.
-        It\'s sandy beaches attracts many a kite surfer, to enjoy the fresh air whilst floating across
-        the long stretch of white sand dunes. </string>
-    <string name="java_one_location">Project 1</string>
+    <string name="java_one_name">Single Screen App</string>
+    <string name="java_one_details">Design and implement a single screen app that displays information about a small business that you are closely familiar with.</string>
+    <string name="java_one_description">PROJECT SPECIFICATION\n
+Build a Single Screen App\n\n
 
-    <string name="java_two_name">Scorekeeper</string>
-    <string name="java_two_details">User Input</string>
-    <string name="java_two_description">The Zulu kingdom have the warmest beaches in SA. It also
-        have the world\'s only stadium swing, and is home to the greater range of the Drakensberg.
-        Durban also offers the best waves for surfers. It also have the best snorkeling spots.
-        If you feel adventurous you can cage dive with the sharks.</string>
-    <string name="java_two_location">Project 2</string>
+Your design must include:\n
 
-    <string name="java_three_name">Quiz</string>
-    <string name="java_three_details">User Input</string>
-    <string name="java_three_description">This mountain range stretches through the majority of
-        South Africa. It is covered in snow during winter and stands tall over the escarpment.</string>
-    <string name="java_three_location">Project 3</string>
+Business name\n
+At least one photo representing the business\n
+Two or more other pieces of information, such as:\n
+Contact information for the business (eg phone number, email address, website)\n
+Address of the Business\n
+Description of business\n
+Hours of operation\n
+Functionality\n\n
+
+MEETS SPECIFICATIONS\n\n
+Program compiles and runs on a phone\n
+
+Program must function in Android Studio emulator and on a phone. Upon launching on a phone, the card appears.\n
+
+Content does not appear "cut off"\n
+
+Layout scales responsively for screen sizes in portrait mode, with no part of any images only partially visible. Student is not responsible for responsive design in landscape mode.\n
+
+Note: Reviewers will test on a Nexus 5X which has a screen size of 5.2 inches (132.08mm). It is advised you test on this size at minimum. If your content does not fit on this size, consider implementing a ScrollView.\n
+
+At least one View Group is included\n
+
+XML must include a Relative Layout, Linear Layout, or Constraint Layout\n
+
+View Groups contain at least one image view and at least one text view\n
+
+Must have one or more image views or text views.\n
+
+Elements and Text on screen are in appropriate units\n
+
+Elements are specified in dp, text is specified in sp.</string>
+    <string name="java_one_location">Passed on: Thu, Nov 7 2:20 pm</string>
+
+    <string name="java_two_name">User Input</string>
+    <string name="java_two_details">Design and implement an app to track scores between two teams playing a game.</string>
+    <string name="java_two_description">PROJECT SPECIFICATION\n
+Score Keeper\n\n
+
+The chosen game has either multiple amounts of points that can be scored, as in american football, or multiple important metrics to track, such as fouls, outs, and innings in baseball.\n\n
+
+Overall layout\n
+
+App is divided into two columns, one for each team.\n\n
+
+Column contents\n
+
+Each column contains a large TextView to keep track of the current score for that team.\n
+
+Optionally, a second TextView to track another important metric such as fouls can be added.\n
+
+Score buttons\n\n
+
+Each column contains multiple buttons. The buttons must track either:\n
+
+Each track a different kind of scoring\n
+
+Or\n
+
+Each track a different metric (one score, the other fouls, for instance).\n\n
+
+Reset button\n
+
+The layout contains a ‘reset’ button.\n\n
+
+Best practices\n\n
+
+The code adheres to all of the following best practices:\n
+
+Text sizes are defined in sp\n
+Lengths are defined in dp\n
+Padding and margin is used appropriately, such that the views are not crammed up against each other.\n\n
+Functionality\n\n
+
+MEETS SPECIFICATIONS\n
+The code runs without errors.\n\n
+
+Score Button Function\n
+
+Each score button updates the score TextView in its column by adding the correct number of points.\n\n
+
+Reset Button Function\n
+
+The reset button resets the scores on both of the score TextViews.\n\n
+
+Code Readability\n\n
+
+Naming conventions\n
+
+Any classes are named after the object they represent.All variables are named by their intended contents.\n
+
+All methods are named by their intended effect or in the style required by a callback interface.\n\n
+
+Code style\n
+
+There are no unnecessary blank lines.One variable is declared per declaration line.\n
+
+The code within a method is indented with respect to the method declaration line.</string>
+    <string name="java_two_location">Passed on: Thu, Nov 14 11:05 pm</string>
+
+    <string name="java_three_name">User Input</string>
+    <string name="java_three_details">Design and implement a short quiz app about some topic you are familiar with.</string>
+    <string name="java_three_description">TODO</string>
+    <string name="java_three_location">Passed on: Thu, Dec 5 6:12 am</string>
 
     <string name="java_four_name">Musical Structure</string>
     <string name="java_four_details">Multi Screen</string>
-    <string name="java_four_description">The Blyde River Canyon is the world\'s largest canyon,
-        only to The Grand Canyon in USA and Fish River Canyon in Namibia.
-        Blyde River Canyon is part of the Panorama route, which include attractions such as God\'s Window,
-        Potholes, and Sabie Falls, as well as the Mpumalanga highlands.</string>
+    <string name="java_four_description">TODO</string>
     <string name="java_four_location">Project 4</string>
 
     <string name="java_five_name">Tour Guide</string>
     <string name="java_five_details">Multi Screen</string>
-    <string name="java_five_description">The Blyde River Canyon is the world\'s largest canyon,
-        only to The Grand Canyon in USA and Fish River Canyon in Namibia.
-        Blyde River Canyon is part of the Panorama route, which include attractions such as God\'s Window,
-        Potholes, and Sabie Falls, as well as the Mpumalanga highlands.</string>
+    <string name="java_five_description">TODO</string>
     <string name="java_five_location">Project 5</string>
 
     <string name="java_six_name">News API</string>
     <string name="java_six_details">Networking</string>
-    <string name="java_six_description">The Blyde River Canyon is the world\'s largest canyon,
-        only to The Grand Canyon in USA and Fish River Canyon in Namibia.
-        Blyde River Canyon is part of the Panorama route, which include attractions such as God\'s Window,
-        Potholes, and Sabie Falls, as well as the Mpumalanga highlands.</string>
+    <string name="java_six_description">TODO</string>
     <string name="java_six_location">Project 6</string>
 
     <!--    Images' descriptions-->
@@ -139,221 +186,24 @@
     <string name="phone_contact">Phone Contact</string>
     <string name="mail_contact">Email Contact</string>
 
-    <!--    &lt;!&ndash;    First tab: Sights&ndash;&gt;-->
-<!--    <string name="sights_one_name">Cape Peninsula</string>-->
-<!--    <string name="sights_one_details">Mountains and Beaches</string>-->
-<!--    <string name="sights_one_description">The mother city is home to various tourist attractions and-->
-<!--        South Africa\'s most popular holiday destination.-->
-<!--        Table Mountain, Lion\'s Head, and Cape Point offers hiking, paragliding, cable cart rides, and spectacular-->
-<!--        views over the city.-->
-<!--        It\'s sandy beaches attracts many a kite surfer, to enjoy the fresh air whilst floating across-->
-<!--        the long stretch of white sand dunes. </string>-->
-<!--    <string name="sights_one_location">Cape Town</string>-->
-
-<!--    <string name="sights_two_name">Durban Beaches</string>-->
-<!--    <string name="sights_two_details">Beaches</string>-->
-<!--    <string name="sights_two_description">The Zulu kingdom have the warmest beaches in SA. It also-->
-<!--        have the world\'s only stadium swing, and is home to the greater range of the Drakensberg.-->
-<!--        Durban also offers the best waves for surfers. It also have the best snorkeling spots.-->
-<!--        If you feel adventurous you can cage dive with the sharks.</string>-->
-<!--    <string name="sights_two_location">Durban</string>-->
-
-<!--    <string name="sights_three_name">Drakensberg</string>-->
-<!--    <string name="sights_three_details">Mountain</string>-->
-<!--    <string name="sights_three_description">This mountain range stretches through the majority of-->
-<!--        South Africa. It is covered in snow during winter and stands tall over the escarpment.</string>-->
-<!--    <string name="sights_three_location">Durban</string>-->
-
-<!--    <string name="sights_four_name">Blyde Canyon</string>-->
-<!--    <string name="sights_four_details">River Canyon</string>-->
-<!--    <string name="sights_four_description">The Blyde River Canyon is the world\'s largest canyon,-->
-<!--        only to The Grand Canyon in USA and Fish River Canyon in Namibia.-->
-<!--        Blyde River Canyon is part of the Panorama route, which include attractions such as God\'s Window,-->
-<!--        Potholes, and Sabie Falls, as well as the Mpumalanga highlands.</string>-->
-<!--    <string name="sights_four_location">Cape Town</string>-->
-
-    <!--<string name="sights_five_name">Tour Guide</string>
-    <string name="sights_five_details">Multi Screen</string>
-    <string name="sights_five_description">The Blyde River Canyon is the world\'s largest canyon,
-        only to The Grand Canyon in USA and Fish River Canyon in Namibia.
-        Blyde River Canyon is part of the Panorama route, which include attractions such as God\'s Window,
-        Potholes, and Sabie Falls, as well as the Mpumalanga highlands.</string>
-    <string name="sights_five_location">Project 5</string>
-
-    <string name="sights_six_name">News API</string>
-    <string name="sights_six_details">Networking</string>
-    <string name="sights_six_description">The Blyde River Canyon is the world\'s largest canyon,
-        only to The Grand Canyon in USA and Fish River Canyon in Namibia.
-        Blyde River Canyon is part of the Panorama route, which include attractions such as God\'s Window,
-        Potholes, and Sabie Falls, as well as the Mpumalanga highlands.</string>
-    <string name="sights_six_location">Project 6</string>
--->
-<!--    &lt;!&ndash;    Second tab: Accommodation&ndash;&gt;-->
-<!--    <string name="accommodation_one_name">Waterfront</string>-->
-<!--    <string name="accommodation_one_details">The heart of Cape Town</string>-->
-<!--    <string name="accommodation_one_description">Stay near all attractions, and visit any of the-->
-<!--        food outlets, bars, or the entertainment arena. Start every day with a boat trip around Africa\'s oldest harbour still in operation.</string>-->
-<!--    <string name="accommodation_one_location">19 Dock Rd, Cape Town, 8001</string>-->
-
-<!--    <string name="accommodation_two_name">One and Only</string>-->
-<!--    <string name="accommodation_two_details">Enjoy a variety of entertainment</string>-->
-<!--    <string name="accommodation_two_description">The 123 hectares area has been developed for mixed-use, with both residential and commercial real estate, and attracts more than 23 million visitors a year</string>-->
-<!--    <string name="accommodation_two_location">19 Dock Rd, Cape Town, 8001</string>-->
-
-<!--    <string name="accommodation_three_name">12 Apostles</string>-->
-<!--    <string name="accommodation_three_details">Pet Friendly</string>-->
-<!--    <string name="accommodation_three_description">Spoil yourself, your family and your pet to a relaxing-->
-<!--    stay in Chapmain\'s Peak.</string>-->
-<!--    <string name="accommodation_three_location">Cape Town, Western Cape</string>-->
-
-<!--    <string name="accommodation_four_name">Stellenbosch</string>-->
-<!--    <string name="accommodation_four_details">Enjoy a friendly stay.</string>-->
-<!--    <string name="accommodation_four_description">Take a break from the city live and enjoy the ocean.-->
-<!--    The friendly locals will make yu feel at home.</string>-->
-<!--    <string name="accommodation_four_location">Stellenbosch, Western Cape, South Africa</string>-->
-
-<!--    &lt;!&ndash;    Third tab: Food&ndash;&gt;-->
-<!--    <string name="food_one_name">Biltong</string>-->
-<!--    <string name="food_one_details">Meaty treats</string>-->
-<!--    <string name="food_one_description">Tasting biltong and droewors is a must when visiting South Africa.-->
-<!--    It\'s air dried meat and wors (sausage) respectively. Every maker uses his/her own recipe, but-->
-<!--    the results are often similar.-->
-<!--    Nowadays you get different flavours, yet the meat of choice remains the same.</string>-->
-<!--    <string name="food_one_location">19 Dock Rd, Cape Town, 8001</string>-->
-
-<!--    <string name="food_two_name">Bokkoms</string>-->
-<!--    <string name="food_two_details">Fishy treats</string>-->
-<!--    <string name="food_two_description">The West Coast and Cape Town provide dried fish to snack on-->
-<!--        anywhere. The taste is not for everyone thou.</string>-->
-<!--    <string name="food_two_location">Western Cape</string>-->
-
-<!--    <string name="food_three_name">Braai</string>-->
-<!--    <string name="food_three_details">SA braai masters</string>-->
-<!--    <string name="food_three_description">Similar to the American BBQ.-->
-<!--        The preferred method is to braai on a wood fire, or charcoal.-->
-<!--        Gas braai being the least preferred, due to its lack of taste and setting a mood.-->
-<!--        We braai meat, wors (sausage) veggies, as separate entities or a combo we call "potjiekos".</string>-->
-<!--    <string name="food_three_location">Everywhere</string>-->
-
-<!--    <string name="food_four_name">Koeksisters</string>-->
-<!--    <string name="food_four_details">Tea time</string>-->
-<!--    <string name="food_four_description">This sweet treat may often be too sweet to some, yet irresistible to others.</string>-->
-<!--    <string name="food_four_location">Everywhere</string>-->
-
-<!--    &lt;!&ndash;    Forth tab: Events&ndash;&gt;-->
-<!--    <string name="event_one_name">Shark Diving</string>-->
-<!--    <string name="event_one_details">Cage diving</string>-->
-<!--    <string name="event_one_description">If you are looking for something more adventurous, take a-->
-<!--        dive with the Great Whites.</string>-->
-<!--    <string name="event_one_location">Coastal</string>-->
-
-<!--    <string name="event_two_name">Dolphin Watching</string>-->
-<!--    <string name="event_two_details">Watch dolphins or play with penguins</string>-->
-<!--    <string name="event_two_description">From watching dolphins to playing with penguins, the cape-->
-<!--        have everything in store for you.</string>-->
-<!--    <string name="event_two_location">19 Dock Rd, Cape Town, 8001</string>-->
-
-<!--    <string name="event_three_name">Kite Surfing</string>-->
-<!--    <string name="event_three_details">Flying on the beach</string>-->
-<!--    <string name="event_three_description">The SouthEaster as the wind in Cape Town is known, is-->
-<!--        perfect for kite surfing. For those who surf the waves, we recommend heading down to Durban-->
-<!--        as it have better waves for surfers.</string>-->
-<!--    <string name="event_three_location">Coastal</string>-->
-
-<!--    <string name="event_four_name">Sky Diving</string>-->
-<!--    <string name="event_four_details">Sky dive or paragliding</string>-->
-<!--    <string name="event_four_description">Take a hike up Lion\'s Head, or a cable cart up Table Mountain,-->
-<!--        or glide off either with a paragliding.-->
-<!--        Or take a drive to one of the many airstrips that offers sky diving lessons. It\'s great fun.</string>-->
-<!--    <string name="event_four_location">Airstrip</string>-->
-
-<!--    &lt;!&ndash;    Fifth tab: More&ndash;&gt;-->
-<!--    <string name="more_one_name">Robbin Island</string>-->
-<!--    <string name="more_one_details">Visit this famous island</string>-->
-<!--    <string name="more_one_description">For the history buffs, take a trip to where political-->
-<!--        prisoners of the Apartheid era got locked up.-->
-<!--    Here you will get to experience how prisoners felt being able to see Cape Town yet have no means-->
-<!--    of getting to it.-->
-<!--    You may even visit Madiba\'s cell of 27 years. It is untouched since his release.</string>-->
-<!--    <string name="more_one_location">Cape Town</string>-->
-
-<!--    <string name="more_two_name">Winelands</string>-->
-<!--    <string name="more_two_details">Wine</string>-->
-<!--    <string name="more_two_description">Cape Town is known for it\'s world class wines and visiting-->
-<!--        one or more of the wineries of the Cape Winelands is a must.-->
-<!--    Due to its popularity it is advised to make a booking before hand to avoid disappointment.-->
-<!--    If you are a collector, make sure to bring your check book as you will surely find thr wine worth purchasing.</string>-->
-<!--    <string name="more_two_location">Western Cape</string>-->
-
-<!--    <string name="more_three_name">Safari</string>-->
-<!--    <string name="more_three_details">Sleep under the stars</string>-->
-<!--    <string name="more_three_description">No trip to SA is completed without a-->
-<!--        wildlife safari in Mpumalanga/limpopo or a visit to the Kalahari.</string>-->
-<!--    <string name="more_three_location">Mpumalanga, Limpopo, Northern Cape</string>-->
-
-<!--    <string name="more_four_name">Long Street</string>-->
-<!--    <string name="more_four_details">Night Life</string>-->
-<!--    <string name="more_four_description">Long Street comes alive at night, when old and young meet-->
-<!--        to paint the town red.-->
-<!--        If you are not one for the night life, you may enjoy a night out in one of the many restaurants-->
-<!--        any time during the day.-->
-<!--    </string>-->
-<!--    <string name="more_four_location">Long St, Cape Town, 8001</string>-->
-
-
-    <!--    &lt;!&ndash;    First tab: Sights&ndash;&gt;-->
-    <!--    <string name="sight_one_name">Cape Peninsula</string>-->
-    <!--    <string name="sight_one_details">The tip of Africa</string>-->
-    <!--    <string name="sight_one_description">The mother city is home to various tourist attractions and-->
-    <!--        South Africa\'s most popular holiday destination.-->
-    <!--        Table Mountain, Lion\'s Head, and Cape Point offers hiking, paragliding, cable cart rides, and spectacular-->
-    <!--        views over the city.-->
-    <!--        It\'s sandy beaches attracts many a kite surfer, to enjoy the fresh air whilst floating across-->
-    <!--        the long stretch of white sand dunes. </string>-->
-    <!--    <string name="sight_one_location">Cape Town, Western Cape</string>-->
-
-    <!--    <string name="sight_two_name">Durban Golden Mile</string>-->
-    <!--    <string name="sight_two_details">Warm beaches</string>-->
-    <!--    <string name="sight_two_description">The Zulu kingdom have the warmest beaches in SA. It also-->
-    <!--        have the world\'s only stadium swing, and is home to the greater range of the Drakensberg.-->
-    <!--        Durban also offers the best waves for surfers. It also have the best snorkeling spots.-->
-    <!--        If you feel adventurous you can cage dive with the sharks.</string>-->
-    <!--    <string name="sight_two_location">Durban, Kwazulu-Natal</string>-->
-
-    <!--    <string name="sight_three_name">Drakensberg</string>-->
-    <!--    <string name="sight_three_details">Africa\'s longest mountain range.</string>-->
-    <!--    <string name="sight_three_description">This mountain range stretches through the majority of-->
-    <!--        South Africa. It is covered in snow during winter and stands tall over the escarpment.</string>-->
-    <!--    <string name="sight_three_location">Kwazulu-Natal</string>-->
-
-    <!--    <string name="sight_four_name">Blyde River Canyon</string>-->
-    <!--    <string name="sight_four_details">The worlds biggest canyons.</string>-->
-    <!--    <string name="sight_four_description">The Blyde River Canyon is the world\'s largest canyon,-->
-    <!--        only to The Grand Canyon in USA and Fish River Canyon in Namibia.-->
-    <!--        Blyde River Canyon is part of the Panorama route, which include attractions such as God\'s Window,-->
-    <!--        Potholes, and Sabie Falls, as well as the Mpumalanga highlands.</string>-->
-    <!--    <string name="sight_four_location">Limpopo, 8001</string>-->
-
-    <!--    &lt;!&ndash;    Music&ndash;&gt;-->
-    <!--    <string name="activity_nowplaying_title">Now playing</string>-->
-    <!--    <string name="tab_playlist">Playlists</string>-->
-    <!--    <string name="tab_artist">Artists</string>-->
-    <!--    <string name="tab_album">Albums</string>-->
-    <!--    <string name="tab_song">Songs</string>-->
-    <!--    <string name="song_1">Song 1</string>-->
-    <!--    <string name="song_2">Song 2</string>-->
-    <!--    <string name="song_3">Song 3</string>-->
-    <!--    <string name="song_4">Song 4</string>-->
-    <!--    <string name="artist_1">Artist 1</string>-->
-    <!--    <string name="artist_2">Artist 2</string>-->
-    <!--    <string name="album_1">Album 1</string>-->
-    <!--    <string name="album_2">Album 2</string>-->
-    <!--    <string name="playlist_1">Playlist 1</string>-->
-    <!--    <string name="playlist_2">Playlist 2</string>-->
-    <!--    <string name="action_activity_nowplaying">Will use MediaPlayer to play music</string>-->
-    <!--    <string name="action_frag_album">Display the list of musicAlbums</string>-->
-    <!--    <string name="action_frag_artist">Display the list of artists</string>-->
-    <!--    <string name="action_frag_playlist">Display the list of playlists</string>-->
-    <!--    <string name="action_frag_song">Display the list of musicSongs</string>-->
+    <!--    Drawings' Strings-->
+    <string name="drawing_one_name">Sketch 1</string>
+    <string name="drawing_one_details">Sketch 1 details</string>
+    <string name="drawing_one_description">Sketch 1 description</string>
+    <string name="drawing_one_location">Sketch 1 location</string>
+    <string name="drawing_two_name">Sketch 2</string>
+    <string name="drawing_two_details">Sketch 2 details</string>
+    <string name="drawing_two_description">Sketch 2 description</string>
+    <string name="drawing_two_location">Sketch 2 location</string>
+    <string name="drawing_three_name">Sketch 3</string>
+    <string name="drawing_three_details">Sketch 3 details</string>
+    <string name="drawing_three_description">Sketch 3 description</string>
+    <string name="drawing_three_location">Sketch 3 location</string>
+    <string name="drawing_four_name">Sketch 4</string>
+    <string name="drawing_four_details">Sketch 4 details</string>
+    <string name="drawing_four_description">Sketch 4 description</string>
+    <string name="drawing_four_location">Sketch 4 location</string>
+    <string name="intro_text">Welcome to my Android Portfolio.\n\nClicking on a project will display its details\n\nLong clicking a project will open the selected app for testing.</string>
+    <string name="action_intro">Introduction</string>
 
 </resources>

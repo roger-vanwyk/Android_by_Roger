@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Objects;
+
 public class DetailsActivity extends AppCompatActivity {
 
     // Creates keys for ListView item data
@@ -65,30 +67,31 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Gets image resource ID from clicked ListView item and stores in attractionDrawable variable
         // Reference: https://stackoverflow.com/questions/1392521/how-can-i-get-image-resource-id-and-send-it-to-other-activity-in-android
-        Bundle extras = getIntent().getExtras();
+        Bundle extras = Objects.requireNonNull(getIntent()).getExtras();
         int attractionDrawable = extras.getInt(KEY_DRAWABLE.get ( ));
 
         // Finds ImageView and sets the image resource ID to clicked ListView item object
-        ImageView imageView = (ImageView) findViewById(R.id.attraction_drawable);
+        ImageView imageView = findViewById(R.id.attraction_drawable);
         imageView.setImageResource(attractionDrawable);
 
         // Finds TextView and sets text to clicked ListView item object
-        TextView attractionNameText = (TextView) findViewById(R.id.attraction_name);
+        TextView attractionNameText = findViewById(R.id.attraction_name);
         attractionNameText.setText(attractionName);
 
         // Finds TextView and sets text to clicked ListView item object
-        TextView attractionLocationText = (TextView) findViewById(R.id.attraction_location);
+        TextView attractionLocationText = findViewById(R.id.attraction_location);
         attractionLocationText.setText(attractionLocation);
         attractionLocationText.setMovementMethod(LinkMovementMethod.getInstance());
 
         // Finds TextView and sets text to clicked ListView item object
-        TextView attractionDetailsText = (TextView) findViewById(R.id.attraction_details);
+        TextView attractionDetailsText = findViewById(R.id.attraction_details);
         attractionDetailsText.setText(attractionDetails);
 
         // Finds TextView and sets text to clicked ListView item object
-        TextView attractionDescriptionText = (TextView) findViewById(R.id.attraction_description);
+        TextView attractionDescriptionText = findViewById(R.id.attraction_description);
         attractionDescriptionText.setText(attractionDescription);
     }
+
 
     /*//        Project 1
         ImageView proj1Img = (ImageView) getActivity().findViewById(R.drawable.proj1);
