@@ -80,6 +80,11 @@ public class DrawingsFragment extends Fragment {
                 R.drawable.dog_on_lease,      //TODO: ADD CORRECT IMAGES
                 getContext().getString(R.string.drawing_four_description),
                 getContext().getString(R.string.drawing_four_location)));
+        info.add(new Info(getContext().getString(R.string.drawing_five_name),
+                getContext().getString(R.string.drawing_five_details),
+                R.drawable.android_rogervw_ambigram,      //TODO: ADD CORRECT IMAGES
+                getContext().getString(R.string.drawing_five_description),
+                getContext().getString(R.string.drawing_five_location)));
 
         // Create an {@link InfoAdapter} and populates with data sourced from {@link Info}.
         InfoAdapter adapter = new InfoAdapter(getActivity(), info);

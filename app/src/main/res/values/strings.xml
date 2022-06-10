@@ -157,6 +157,7 @@ Code style\n
 There are no unnecessary blank lines.One variable is declared per declaration line.\n
 
 The code within a method is indented with respect to the method declaration line.</string>
+
     <string name="java_two_location">Passed on: Thu, Nov 14 11:05 pm</string>
 
     <string name="java_three_name">User Input</string>
@@ -191,20 +192,29 @@ The code within a method is indented with respect to the method declaration line
     <string name="drawing_one_details">Sketch 1 details</string>
     <string name="drawing_one_description">Sketch 1 description</string>
     <string name="drawing_one_location">Sketch 1 location</string>
+
     <string name="drawing_two_name">Sketch 2</string>
     <string name="drawing_two_details">Sketch 2 details</string>
     <string name="drawing_two_description">Sketch 2 description</string>
     <string name="drawing_two_location">Sketch 2 location</string>
+
     <string name="drawing_three_name">Sketch 3</string>
     <string name="drawing_three_details">Sketch 3 details</string>
     <string name="drawing_three_description">Sketch 3 description</string>
     <string name="drawing_three_location">Sketch 3 location</string>
+
     <string name="drawing_four_name">Sketch 4</string>
     <string name="drawing_four_details">Sketch 4 details</string>
     <string name="drawing_four_description">Sketch 4 description</string>
     <string name="drawing_four_location">Sketch 4 location</string>
+
+    <string name="drawing_five_name">Sketch 5</string>
+    <string name="drawing_five_details">Sketch 5 details</string>
+    <string name="drawing_five_description">Sketch 5 description</string>
+    <string name="drawing_five_location">Sketch 5 location</string>
+
     <string name="intro_text">Welcome to my Android Portfolio.\n\nClicking on a project will display its details\n\nLong clicking a project will open the selected app for testing.</string>
-    <string name="action_intro">Introduction</string>
+    <string name="action_intro">Help</string>
     <string name="telNum">27789871987</string>
     <string name="emailAddress">roger.vanwyk@gmail.com</string>
     <string name="button">Button</string>

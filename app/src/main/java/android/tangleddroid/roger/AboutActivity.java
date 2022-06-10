@@ -1,12 +1,16 @@
 package android.tangleddroid.roger;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 public class AboutActivity extends AppCompatActivity {
 
@@ -114,28 +118,39 @@ public class AboutActivity extends AppCompatActivity {
                 }
         );*/
 
-        Button callButton =(Button) findViewById(R.id.callButton);
+        Button callButton = (Button) findViewById(R.id.callButton);
         callButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
                         makeCall();
-                        dailNumber();
+//                        dailNumber();
                     }
 
-                    private void dailNumber() {
+                    /*private void dailNumber() {
                         Intent dialIntent = new Intent(Intent.ACTION_DIAL);
-                        dialIntent.setData(Uri.parse("tel:"+"+"+telNum));  //  Replace with your own number
+                        dialIntent.setData(Uri.parse("tel:" + "+" + telNum));  //  Replace with your own number
                         startActivity(dialIntent);
-                    }
+                    }*/
 
                     private void makeCall() {
                         Intent callIntent = new Intent(Intent.ACTION_CALL);
-                        callIntent.setData(Uri.parse("tel:"+"+"+telNum));  //  Replace with your own number
-                        startActivity(callIntent);
+                        String telNum = "27789871987";
+                        telNum.trim();
+                        callIntent.setData(Uri.parse("tel:" + "+" + telNum));  //  Replace with your own number
+                        if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                            Toast.makeText(AboutActivity.this, "Please grant permission", Toast.LENGTH_SHORT).show();
+                            requestPermission();
+                        } else {
+                            startActivity(callIntent);
+                        }
                     }
-                }
-        );
+
+                    private void requestPermission() {
+                        ActivityCompat.requestPermissions(AboutActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+
+                    }
+                });
+        }
     }
-}
