@@ -1,10 +1,17 @@
 package android.tangleddroid.roger;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AboutActivity extends AppCompatActivity {
+
+//    Initiate call button
+    Button callButton;
 
     /*//    Use the FloatingActionButton to call and email contact
     FloatingActionButton mPhoneContact, mMailContact;
@@ -21,10 +28,12 @@ public class AboutActivity extends AppCompatActivity {
 
 //    private ActivityScrollingBinding binding;
 
+    private int telNum;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scrolling);
+        setContentView(R.layout.activity_about);
 
         /*binding = ActivityScrollingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());*/
@@ -105,5 +114,28 @@ public class AboutActivity extends AppCompatActivity {
                 }
         );*/
 
+        Button callButton =(Button) findViewById(R.id.callButton);
+        callButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        makeCall();
+                        dailNumber();
+                    }
+
+                    private void dailNumber() {
+                        Intent dialIntent = new Intent(Intent.ACTION_DIAL);
+                        dialIntent.setData(Uri.parse("tel:"+"+"+telNum));  //  Replace with your own number
+                        startActivity(dialIntent);
+                    }
+
+                    private void makeCall() {
+                        Intent callIntent = new Intent(Intent.ACTION_CALL);
+                        callIntent.setData(Uri.parse("tel:"+"+"+telNum));  //  Replace with your own number
+                        startActivity(callIntent);
+                    }
+                }
+        );
     }
 }

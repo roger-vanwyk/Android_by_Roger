@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-//        Allows user to exit app by clicking back twice with 1000 from popup message
-        if (pressedTime + 1000 > System.currentTimeMillis()) {
+//        Allows user to exit app by clicking back twice with 1500 from popup message
+        if (pressedTime + 1500 > System.currentTimeMillis()) {
             super.onBackPressed();
         } else {
             Toast.makeText(getBaseContext(), "Press back again to exit app", Toast.LENGTH_SHORT).show();
