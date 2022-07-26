@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pageLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
@@ -12,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/viewpager"
         app:tabMode="scrollable" />
 
     <androidx.viewpager.widget.ViewPager
@@ -19,4 +21,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/todo" />
+
 </LinearLayout>

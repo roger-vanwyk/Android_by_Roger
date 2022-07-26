@@ -12,7 +12,7 @@
     <dimen name="card_view_text_margin_bottom">8dp</dimen>
     <dimen name="card_view_text_margin_left">16dp</dimen>
     <dimen name="card_view_text_margin_top">16dp</dimen>
-<!--    This is the same dimensions used for the project: TourGuide(ToerGids)-->
+    <!--    This is the same dimensions used for the project: TourGuide(ToerGids)-->
 
     <!-- DetailsActivity margins -->
     <dimen name="margin_top">16dp</dimen>
