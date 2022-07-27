@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -20,8 +21,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //    Initiate pressedTime
     private long pressedTime;
-
+/*//Initiate boolean isAppInstalledOrNot()
+    private final boolean isAppInstalledOrNot;*/
+//    Initiate FABs
     FloatingActionButton fabMain, fabCall, fabEmail, fabMeet;
+/*//    Initiate PackageManager
+    PackageManager pm;*/
+/*//Initiate String
+    String s;*/
+
+/*//    Required empty constructor
+    public MainActivity(boolean isAppInstalledOrNot) {
+        this.isAppInstalledOrNot = isAppInstalledOrNot;
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,12 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SharedPreferences preferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE); //Method set private so PREFERENCE is only accessible by this app
         String FirstTime = preferences.getString("FirstTimeLaunch", "");
 
-        if (FirstTime.equals("yes")) {
-//            If app was opened before
-            Toast.makeText(this, "Welcome back", Toast.LENGTH_SHORT).show();
-
-        } else {
-//            If opened for the first time
+        if (FirstTime.equals("")) {
+            //            If opened for the first time
             SharedPreferences.Editor editor = preferences.edit();
             editor.putString("FirstTimeLaunch", "yes");
             editor.apply();
@@ -82,6 +90,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(prefIntent); // The intro activity can also be launch from the menu bar
 
             Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
+
+        } else {
+//            If app was opened before
+            Toast.makeText(this, "Welcome back", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -113,21 +125,54 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         private void meetRogerJitsi () {
             Toast.makeText(this, "Meeting with Roger", Toast.LENGTH_SHORT).show();
+/*//            Check if JitsiMeet is installed
+            if (isAppInstalledOrNot) {
+
+                Log.i("RogDroidLog", "Application is already installed");
+
+                //                This Intent launch the package if it's already installed on device
+                Intent LaunchIntent = getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu");
+                startActivity(LaunchIntent);
+                return;
+            } else {
+//                Download and install application
+                Intent installJitsi = new Intent("android.intent.action.VIEW");
+                installJitsi.setData(Uri.parse((String) "https://drive.google.com/file/d/1J1m6IjPES8bhez9i_epojXD6PzWMSHb7/view?usp=drivesdk"));
+                startActivity(installJitsi);
+                Log.i("RogDroidLog", "Require JitsiMeet app to be installed");
+            }
+            pm = getPackageManager();
+            try {
+
+                pm.getPackageInfo(s, PackageManager.GET_ACTIVITIES);
+            } catch (PackageManager.NameNotFoundException ignored) {}
+        }*/
         }
 
         private void emailRogerGmail () {
             Toast.makeText(this, "Emailing Roger", Toast.LENGTH_SHORT).show();
+            Intent compileEmail = new Intent(MainActivity.this, EmailActivity.class);
+            startActivity(compileEmail);
         }
 
         private void dialRogerPhone () {
-            startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "0789871987", null)));
+            Toast.makeText(this, "Calling Roger", Toast.LENGTH_SHORT).show();
+            try {
+                startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "0789871987", null)));
+            } finally {
+                startActivity(new Intent(Intent.ACTION_CALL, Uri.fromParts("tel", "0789871987", null)));
+            }
         }
 
 //    Sets doubleBackPress to exit
     @Override
     public void onBackPressed() {
 
-//        Allows user to exit app by clicking back twice with 1000 from popup message
+        doublePressBackToExit();
+    }
+
+    private void doublePressBackToExit() {
+        //        Allows user to exit app by clicking back twice with 1000 from popup message
         if (pressedTime + 1500 > System.currentTimeMillis()) {
             super.onBackPressed();
         } else {
@@ -137,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_about, menu);
         return true;

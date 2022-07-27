@@ -214,5 +214,6 @@ The code within a method is indented with respect to the method declaration line
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="email">Email</string>
 
 </resources>
