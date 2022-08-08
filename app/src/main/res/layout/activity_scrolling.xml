@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:background="@drawable/ic_rog_droid"
+            android:scaleType="fitCenter"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"

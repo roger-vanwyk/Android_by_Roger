@@ -49,11 +49,6 @@
             android:label="@string/about"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".EmailActivity"
-            android:label="@string/email"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity
             android:name=".android_udacity.news.NewsActivity"
             android:label="@string/news"
             android:exported="false"
