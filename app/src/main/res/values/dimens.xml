@@ -7,8 +7,8 @@
     <dimen name="card_view_margin">8dp</dimen>
     <dimen name="card_view_corner_radius">8dp</dimen>
     <dimen name="card_view_elevation">4dp</dimen>
-    <dimen name="card_view_image_width">150dp</dimen>
-    <dimen name="card_view_image_height">500dp</dimen>
+    <dimen name="card_view_image_width">140dp</dimen>
+    <dimen name="card_view_image_height">400dp</dimen>
     <dimen name="card_view_text_margin_bottom">8dp</dimen>
     <dimen name="card_view_text_margin_left">16dp</dimen>
     <dimen name="card_view_text_margin_top">16dp</dimen>

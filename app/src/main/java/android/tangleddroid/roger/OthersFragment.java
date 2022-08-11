@@ -82,7 +82,7 @@ public class OthersFragment extends Fragment {
                 getContext().getString(R.string.food_four_location)));
 
         // Create an {@link InfoAdapter} and populates with data sourced from {@link Info}.
-        InfoAdapter adapter = new InfoAdapter(getActivity(), info);
+        ListInfoAdapter adapter = new ListInfoAdapter(getActivity(), info);
 
         // Finds the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There is a view ID called list in the list_view.xml file.

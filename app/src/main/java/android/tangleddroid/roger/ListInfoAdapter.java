@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class InfoAdapter extends ArrayAdapter<Info> {
+public class ListInfoAdapter extends ArrayAdapter<Info> {
 
-    public InfoAdapter(Activity context, ArrayList<Info> info) {
+    public ListInfoAdapter(Activity context, ArrayList<Info> info) {
         super(context, 0, info);
     }
 

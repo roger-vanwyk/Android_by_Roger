@@ -62,27 +62,27 @@ public class DrawingsFragment extends Fragment {
         final ArrayList<Info> info = new ArrayList<Info>();
         info.add(new Info(getContext().getString(R.string.drawing_one_name),
                 getContext().getString(R.string.drawing_one_details),
-                R.drawable.ic_rog_bw,      //TODO: ADD CORRECT IMAGES
+                R.mipmap.ic_launcher,
                 getContext().getString(R.string.drawing_one_description),
                 getContext().getString(R.string.drawing_one_location)));
         info.add(new Info(getContext().getString(R.string.drawing_two_name),
                 getContext().getString(R.string.drawing_two_details),
-                R.drawable.super_r,      //TODO: ADD CORRECT IMAGES
+                R.drawable.skecth_rvw_older_emojigram,
                 getContext().getString(R.string.drawing_two_description),
                 getContext().getString(R.string.drawing_two_location)));
         info.add(new Info(getContext().getString(R.string.drawing_three_name),
                 getContext().getString(R.string.drawing_three_details),
-                R.drawable.eagle_sketch,      //TODO: ADD CORRECT IMAGES
+                R.drawable.sketch_rvw_older,
                 getContext().getString(R.string.drawing_three_description),
                 getContext().getString(R.string.drawing_three_location)));
         info.add(new Info(getContext().getString(R.string.drawing_four_name),
                 getContext().getString(R.string.drawing_four_details),
-                R.drawable.dog_on_lease,      //TODO: ADD CORRECT IMAGES
+                R.drawable.sketch_rvw_oldest,
                 getContext().getString(R.string.drawing_four_description),
                 getContext().getString(R.string.drawing_four_location)));
 
         // Create an {@link InfoAdapter} and populates with data sourced from {@link Info}.
-        InfoAdapter adapter = new InfoAdapter(getActivity(), info);
+        ListInfoAdapter adapter = new ListInfoAdapter(getActivity(), info);
 
         // Finds the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There is a view ID called list in the list_view.xml file.

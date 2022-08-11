@@ -187,10 +187,11 @@ The code within a method is indented with respect to the method declaration line
     <string name="mail_contact">Email Contact</string>
 
     <!--    Drawings' Strings-->
-    <string name="drawing_one_name">Sketch 1</string>
-    <string name="drawing_one_details">Sketch 1 details</string>
-    <string name="drawing_one_description">Sketch 1 description</string>
-    <string name="drawing_one_location">Sketch 1 location</string>
+    <string name="drawing_one_name">EmojiGram</string>
+    <string name="drawing_one_details">A sketch manipulation of the Android logo surrounded by an
+        ambigram of RogerVanWyk</string>
+    <string name="drawing_one_description">Ambigram surrounding a droid</string>
+    <string name="drawing_one_location">App Icon</string>
     <string name="drawing_two_name">Sketch 2</string>
     <string name="drawing_two_details">Sketch 2 details</string>
     <string name="drawing_two_description">Sketch 2 description</string>

@@ -14,8 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
 
@@ -26,7 +26,7 @@ public class JavaFragment extends Fragment {
 
     private ImageView proj1Img, proj2Img, proj3Img, proj4Img, proj5Img, proj6Img;
 
-    // Creates keys for ListView item data
+    // Creates keys for GridView item data
     public static final ThreadLocal<String> KEY_NAME = new ThreadLocal<String> ( ) {
         @Override
         protected String initialValue() {
@@ -65,7 +65,7 @@ public class JavaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.list_view, container, false);
+        View rootView = inflater.inflate(R.layout.grid_view, container, false);
 
         // Creates a list of sights
         final ArrayList<Info> info = new ArrayList<Info>();
@@ -106,19 +106,19 @@ public class JavaFragment extends Fragment {
                 getContext().getString(R.string.java_six_description),
                 getContext().getString(R.string.java_six_location)));
 
-        // Create an {@link InfoAdapter} and populates with data sourced from {@link Info}.
-        InfoAdapter adapter = new InfoAdapter(getActivity(), info);
+        // Create an {@link GridInfoAdapter} and populates with data sourced from {@link Info}.
+        GridInfoAdapter adapter = new GridInfoAdapter(getActivity(), info);
 
-        // Finds the {@link ListView} object in the view hierarchy of the {@link Activity}.
+        // Finds the {@link GridView} object in the view hierarchy of the {@link Activity}.
         // There is a view ID called list in the list_view.xml file.
-        ListView listView = (ListView) rootView.findViewById(R.id.list);
+        GridView gridView = (GridView) rootView.findViewById(R.id.grid_list);
 
-        // Sets the {@link ListView} to use the {@link InfoAdapter} to display list items for each {@link Info} object.
-        listView.setAdapter(adapter);
+        // Sets the {@link GridView} to use the {@link GridInfoAdapter} to display list items for each {@link Info} object.
+        gridView.setAdapter(adapter);
 
         // Sets an onItemClickListener(), gets the position of clicked item, and calls an explicit intent.
         // Extras sent to the {@link DetailsActivity} include all {@link Info} object data, except for distance.
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Info item = info.get(position);
@@ -132,12 +132,10 @@ public class JavaFragment extends Fragment {
             }
         });
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view,
                                            int position, long id) {
-
-                // String value =(String)lv.getItemAtPosition(position);
 
                 if (position == 0) {
                     Intent intent = new Intent(getContext(), CardActivity.class);
@@ -157,75 +155,12 @@ public class JavaFragment extends Fragment {
                 } else if (position == 5) {
                     Intent intent = new Intent(getContext(), NewsActivity.class);
                     startActivity(intent);
-
                 }
 
                 return true;
             }
-
-            ;
-
-        /*//        Project 1
-        ImageView proj1Img = (ImageView) getActivity().findViewById(R.drawable.proj1);
-        proj1Img.setOnClickListener(v -> {
-            //            OnClickListener for ImageButton opens CardActivity onClick
-            Intent project1Intent = new Intent(getView().getContext(), CardActivity.class);
-            startActivity(project1Intent);
-
-            Toast.makeText(getApplicationContext(), "Card", Toast.LENGTH_SHORT).show();
         });
 
-//        Project 2
-        ImageView proj2Img = (ImageView) getActivity().findViewById(R.drawable.proj2);
-        proj2Img.setOnClickListener(v -> {
-            //            OnClickListener for ImageButton opens CardActivity onClick
-            Intent project2Intent = new Intent(getView().getContext(), ScorekeeperActivity.class);
-            startActivity(project2Intent);
-
-            Toast.makeText(getApplicationContext(), "Scorekeeper", Toast.LENGTH_SHORT).show();
-        });
-
-//        Project 3
-        ImageView proj3Img = (ImageView) getActivity().findViewById(R.drawable.proj3);
-        proj3Img.setOnClickListener(v -> {
-            //            OnClickListener for ImageButton opens QuizActivity onClick
-            Intent project3Intent = new Intent(getView().getContext(), QuizActivity.class);
-            startActivity(project3Intent);
-
-            Toast.makeText(getApplicationContext(), "Quiz", Toast.LENGTH_SHORT).show();
-        });
-
-//        Project 4
-        ImageView proj4Img = (ImageView) getActivity().findViewById(R.drawable.proj4);
-        proj4Img.setOnClickListener(v -> {
-            //            OnClickListener for ImageButton opens MusicActivity onClick
-            Intent project4Intent = new Intent(getView().getContext(), MusicActivity.class);
-            startActivity(project4Intent);
-
-            Toast.makeText(getApplicationContext(), "Music", Toast.LENGTH_SHORT).show();
-        });
-
-//        Project 5
-        ImageView proj5Img = (ImageView) getActivity().findViewById(R.drawable.proj5);
-        proj5Img.setOnClickListener(v -> {
-            //            OnClickListener for ImageButton opens GuideActivity onClick
-            Intent project5Intent = new Intent(getView().getContext(), GuideActivity.class);
-            startActivity(project5Intent);
-
-            Toast.makeText(getApplicationContext(), "Guide", Toast.LENGTH_SHORT).show();
-        });
-
-//        Project 6
-        ImageView proj6Img = (ImageView) getActivity().findViewById(R.drawable.proj6);
-        proj6Img.setOnClickListener(v -> {
-            //            OnClickListener for ImageButton opens NewsActivity onClick
-            Intent project6Intent = new Intent(getView().getContext(), NewsActivity.class);
-            startActivity(project6Intent);
-
-            Toast.makeText(getApplicationContext(), "News", Toast.LENGTH_SHORT).show();
-        });*/
-
-        });
     return rootView;
     }
 }

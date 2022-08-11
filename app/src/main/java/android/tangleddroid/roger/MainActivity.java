@@ -7,11 +7,9 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -31,8 +29,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //    Initiate pressedTime
     private long pressedTime;
 
-    WebView webView;
-
 /*//    Initiate PackageManager
     PackageManager pm;*/
 /*//Initiate String
@@ -44,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }*/
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
@@ -69,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ViewPager viewPager = findViewById(R.id.viewpager);
 
         // Create an adapter that knows where each fragment should be shown on each page
-        CategoryAdapter adapter = new CategoryAdapter(this, getSupportFragmentManager());
+        CategoryAdapter adapter = new CategoryAdapter(MainActivity.this, getSupportFragmentManager());
 
         // Set adapter onto the ViewPager
         viewPager.setAdapter(adapter);
@@ -103,6 +99,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            If app was opened before
             Toast.makeText(this, "Welcome back", Toast.LENGTH_SHORT).show();
         }
+
+        /*final String iFrame = "<!DOCTYPE html>\\n\" +\n" +
+                "                \"    <html>\\n\" +\n" +
+                "                \"      <head>\\n\" +\n" +
+                "                \"        <script src='https://8x8.vc/external_api.js' async></script>\\n\" +\n" +
+                "                \"        <style>html, body, #jaas-container { height: 100%; }</style>\\n\" +\n" +
+                "                \"        <script type=\\\"text/javascript\\\">\\n\" +\n" +
+                "                \"          window.onload = () => {\\n\" +\n" +
+                "                \"            const api = new JitsiMeetExternalAPI(\\\"8x8.vc\\\", {\\n\" +\n" +
+                "                \"              roomName: \\\"vpaas-magic-cookie-b5b47f64f28a44178840f264e2b05986/AndroidByRogerJitsiMeeting\\\",\\n\" +\n" +
+                "                \"              parentNode: document.querySelector('#jaas-container')\\n\" +\n" +
+                "                \"            });\\n\" +\n" +
+                "                \"          }\\n\" +\n" +
+                "                \"        </script>\\n\" +\n" +
+                "                \"      </head>\\n\" +\n" +
+                "                \"      <body><div id=\\\"jaas-container\\\" /></body>\\n\" +\n" +
+                "                \"    </html>";
+
+
+        WebView webView = (WebView) findViewById(R.id.webView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl(iFrame);
+
+        return;*/
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -146,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void meetRogerVanWyk() {
         Toast.makeText(this, "Meeting with Roger", Toast.LENGTH_SHORT).show();
 
-        PackageManager pm = getPackageManager();
+        /*PackageManager pm = getPackageManager();
         boolean installed = false;
 
         while (!installed) {
@@ -188,9 +209,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } catch (PackageManager.NameNotFoundException e) {
             app_installed = false;
         }
-        return app_installed;
+        return app_installed;*/
 
-        /*String html = "<!DOCTYPE html>\n" +
+        String html = "<!DOCTYPE html>\n" +
                 "    <html>\n" +
                 "      <head>\n" +
                 "        <script src='https://8x8.vc/external_api.js' async></script>\n" +
@@ -207,7 +228,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 "      <body><div id=\"jaas-container\" /></body>\n" +
                 "    </html>";
 
-        webView.loadData(html, "text/javascript", null);*/
+        Intent webIntent = new Intent(Intent.ACTION_VIEW);
+        webIntent.setData(Uri.parse("html"));
+        startActivity(webIntent);
     }
 
     private void emailRogerVanWyk() {
