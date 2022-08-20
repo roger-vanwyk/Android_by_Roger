@@ -8,7 +8,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.tangleddroid.roger.onboarding.OnboardingActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +22,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Intent installJitsi = new Intent();
+    private Intent launchJitsi = new Intent();
+    private final boolean isAppInstalled = false;
 
     //    Initiate FABs
     FloatingActionButton fabMain, fabCall, fabEmail, fabMeet;
@@ -132,60 +135,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void meetRogerVanWyk() {
         Toast.makeText(this, "Meeting with Roger", Toast.LENGTH_SHORT).show();
 
-        boolean installed = appInstalledOrNot();
+        if (appInstalledOrNot()) {
 
-        while (!installed) {
-            installed = appInstalledOrNot();
-            if (installed) {
-                Toast.makeText(this, "App installed", Toast.LENGTH_SHORT).show();
+            startActivity(getPackageManager().getLaunchIntentForPackage("org.jitsi.meeu"));
 
-                Log.i("RogDroidLog", "Application is already installed");
+        } else {
 
-                //                This Intent launch the package if it's already installed on device
-                getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu");
-                Intent launchIntent;
-                launchIntent = new Intent(MainActivity.this, (getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu")).getClass());
-                startActivity(launchIntent);
-
-                return;
-            } else {
-//                Download and install application
-                Intent installJitsi = new Intent("android.intent.action.VIEW");
-                installJitsi.setData
-                        (Uri.parse
-             ("https://drive.google.com/file/d/1J1m6IjPES8bhez9i_epojXD6PzWMSHb7/view?usp=drivesdk")
-                        );
-                startActivity(installJitsi);
-                Log.i("RogDroidLog", "Require JitsiMeet app to be installed");
-            }
-            try {
-
-                //                This Intent launch the package if it's already installed on device
-                getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu");
-                Intent launchIntent;
-                launchIntent = new Intent(MainActivity.this, (getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu")).getClass());
-                startActivity(launchIntent);
-
-                PackageManager pm = getPackageManager();
-                pm.getPackageInfo("com.jitsi.meeu", PackageManager.GET_ACTIVITIES);
-            } catch (PackageManager.NameNotFoundException ignored) {
-            }
-            startActivity(getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu"));
+            launchJitsi.setAction("android.intent.action.VIEW");
+            launchJitsi.setData(Uri.parse("https://drive.google.com/file/d/1J1m6IjPES8bhez9i_epojXD6PzWMSHb7/view?usp=drivesdk"));
+            startActivity(launchJitsi);
         }
     }
 
     private boolean appInstalledOrNot() {
         PackageManager pm = getPackageManager();
-        boolean installed = false;
         try {
-            pm.getPackageInfo("com.jitsi.meeu", PackageManager.GET_ACTIVITIES);
-            installed = true;
-        } catch (PackageManager.NameNotFoundException ignored) {
-        }
-        return installed;
-    }
+            pm.getPackageInfo("org.jitsi.meeu", 0);
+            return true;
 
-    private void emailRogerVanWyk() {
+//            Log.i("RogDroidLog", "Application is already installed");
+        } catch (PackageManager.NameNotFoundException nameNotFoundException) {
+            return false;
+
+//        Log.i("RogDroidLog", "Require JitsiMeet app to be installed");
+    }
+}
+
+private void emailRogerVanWyk() {
         Toast.makeText(this, "Emailing Roger", Toast.LENGTH_SHORT).show();
         Intent compileEmail = new Intent(Intent.ACTION_SEND);
         compileEmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"roger.vanwyk@gmail.com"});
@@ -195,16 +171,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void callRogerVanWyk() {
-        Toast.makeText(this, "Calling Roger", Toast.LENGTH_SHORT).show();
+
+        String telNum = "0789871987";
+        Intent intent = new Intent();
+
+        if (telNum.trim().isEmpty()){
+            intent.setAction("android.intent.action.DIAL");
+            intent.setData(Uri.parse("0789871987"));
+            startActivity(intent);
+        return;
+        } else {
 
         Intent callRogerIntent = new Intent(Intent.ACTION_CALL);
 
+        callRogerIntent.setAction("android.intent.action.CALL");
         callRogerIntent.setData(Uri.parse("tel: 0789871987"));
+
+        Toast.makeText(this, "Calling Roger", Toast.LENGTH_SHORT).show();
 
         if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             startActivity(callRogerIntent);
             finish();       //  Without this, call would be re-occurring...
-        }
+        }}
 
         requestPermission();
 
