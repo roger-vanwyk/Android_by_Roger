@@ -19,37 +19,41 @@
     <string name="contact">Contact</string>
     <string name="credentials">Credentials</string>
     <string name="join">Join</string>
+    <string name="demo_title">Android App Development</string>
+    <string name="demo_content">Java &amp; Kotlin</string>
+    <string name="onboarding_content_one">Android App Development</string>
+    <string name="onboarding_sub_content_one">Java &amp; Kotlin</string>
+    <string name="onboarding_content_two">Android App Development</string>
+    <string name="onboarding_sub_content_two">Java &amp; Kotlin</string>
+    <string name="onboarding_content_three">Android App Development</string>
+    <string name="onboarding_sub_content_three">Java &amp; Kotlin</string>
+    <string name="onboarding_content_four">Android App Development</string>
+    <string name="onboarding_sub_content_four">Java &amp; Kotlin</string>
     <string name="large_text">
-        "Program Syllabus"\n
+        "Roger van Wyk"\n
 
-"This program is divided into 5 parts and 6 projects you need to complete in order to receive your certificate."\n\n
+"Android Everywhere developer"\n\n
 
-PART 1: Welcome to the Nanodegree\n
-An introduction to your Nanodegree program.\n\n
+Java Android Basics NanoDegree (ASSESSED)\n
+Google grant to learn basic Android app development through www.udacity.com\n\n
 
-PART 2: User Interface\n
-Learn how to transform your hand-drawn app designs into layouts using the XML markup language, and use Views and ViewGroups — the building blocks of an Android app\'s user interface — to display images and text.\n\n
+Kotlin Android Basics NanoDegree (UN-ASSESSED)\n
+Free learning at www.udacity.com\n\n
 
-        Project 1: Build a Single Screen App\n\n
+Java Android Advanced Development\n
+www.udacity.com AND other platforms eg. www.developers_android.com, www.stack-overflow.com,
+        www.medium.com, etc. etc.\n\n
 
-PART 3: User Input\n
-Harness the power of Java to build a coffee-ordering app, use variables to add interactivity to your app, and learn the basics of object-oriented programming.\n\n
+Kotlin Android Advanced Development\n
+In progress; To be completed shortly.\n\n
 
-        Project 2: Score Keeper App\n
+Proficient\n
+Adobe Illustrator\n\n
+        Adobe Photoshop\n\n
+        AutoDesk Sketchbook Pro\n\n
+        Android Studio\n\n
+        IntelliJ IDEA\n\n
 
-        Project 3: Quiz App\n\n
-
-PART 4: Multi-Screen Apps\n
-Learn how to show multiple screens in a Miwok language app, and add audio and images to your app. You\'ll also learn how Android handles touch events, and make visual changes to add polish to your fully functional app.\n\n
-
-        Project 4: Musical Structure App\n
-
-        Project 5: Tour Guide App\n\n
-
-PART 5: Networking"\n
-Discover the power of Web APIs and how to use them in your apps, and learn the basics of networking in Android, including HTTP networking, JSON parsing, and threads.\n\n
-
-        Project 6: News App\n
     </string>
 
     <!--    Java Projects-->

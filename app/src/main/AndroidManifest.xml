@@ -15,7 +15,7 @@
         android:theme="@style/Theme.AndroidPortfolio">
 
         <activity
-            android:name=".IntroActivity"
+            android:name=".onboarding.OnboardingActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <!-- Meta-data element for versions lower than 4.1 -->

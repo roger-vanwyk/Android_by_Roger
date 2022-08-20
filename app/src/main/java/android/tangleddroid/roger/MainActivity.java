@@ -7,6 +7,8 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.tangleddroid.roger.onboarding.OnboardingActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,22 +24,10 @@ import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    /*//Initiate boolean isAppInstalledOrNot()
-        private final boolean isAppInstalledOrNot;*/
-//    Initiate FABs
+    //    Initiate FABs
     FloatingActionButton fabMain, fabCall, fabEmail, fabMeet;
     //    Initiate pressedTime
     private long pressedTime;
-
-/*//    Initiate PackageManager
-    PackageManager pm;*/
-/*//Initiate String
-    String s;*/
-
-/*//    Required empty constructor
-    public MainActivity(boolean isAppInstalledOrNot) {
-        this.isAppInstalledOrNot = isAppInstalledOrNot;
-    }*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -90,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editor.apply();
 
 //            This shows the introduction activity on first launch or re-installation of app
-            Intent prefIntent = new Intent(MainActivity.this, IntroActivity.class);
+            Intent prefIntent = new Intent(MainActivity.this, OnboardingActivity.class);
             startActivity(prefIntent); // The intro activity can also be launch from the menu bar
 
             Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
@@ -99,31 +89,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            If app was opened before
             Toast.makeText(this, "Welcome back", Toast.LENGTH_SHORT).show();
         }
-
-        /*final String iFrame = "<!DOCTYPE html>\\n\" +\n" +
-                "                \"    <html>\\n\" +\n" +
-                "                \"      <head>\\n\" +\n" +
-                "                \"        <script src='https://8x8.vc/external_api.js' async></script>\\n\" +\n" +
-                "                \"        <style>html, body, #jaas-container { height: 100%; }</style>\\n\" +\n" +
-                "                \"        <script type=\\\"text/javascript\\\">\\n\" +\n" +
-                "                \"          window.onload = () => {\\n\" +\n" +
-                "                \"            const api = new JitsiMeetExternalAPI(\\\"8x8.vc\\\", {\\n\" +\n" +
-                "                \"              roomName: \\\"vpaas-magic-cookie-b5b47f64f28a44178840f264e2b05986/AndroidByRogerJitsiMeeting\\\",\\n\" +\n" +
-                "                \"              parentNode: document.querySelector('#jaas-container')\\n\" +\n" +
-                "                \"            });\\n\" +\n" +
-                "                \"          }\\n\" +\n" +
-                "                \"        </script>\\n\" +\n" +
-                "                \"      </head>\\n\" +\n" +
-                "                \"      <body><div id=\\\"jaas-container\\\" /></body>\\n\" +\n" +
-                "                \"    </html>";
-
-
-        WebView webView = (WebView) findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl(iFrame);
-
-        return;*/
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -167,18 +132,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void meetRogerVanWyk() {
         Toast.makeText(this, "Meeting with Roger", Toast.LENGTH_SHORT).show();
 
-        /*PackageManager pm = getPackageManager();
-        boolean installed = false;
+        boolean installed = appInstalledOrNot();
 
         while (!installed) {
-            installed = appInstalledOrNot("com.jitsi.meeu");
+            installed = appInstalledOrNot();
             if (installed) {
                 Toast.makeText(this, "App installed", Toast.LENGTH_SHORT).show();
 
                 Log.i("RogDroidLog", "Application is already installed");
 
                 //                This Intent launch the package if it's already installed on device
-                Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu");
+                getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu");
+                Intent launchIntent;
                 launchIntent = new Intent(MainActivity.this, (getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu")).getClass());
                 startActivity(launchIntent);
 
@@ -186,51 +151,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             } else {
 //                Download and install application
                 Intent installJitsi = new Intent("android.intent.action.VIEW");
-                installJitsi.setData(Uri.parse("https://drive.google.com/file/d/1J1m6IjPES8bhez9i_epojXD6PzWMSHb7/view?usp=drivesdk"));
+                installJitsi.setData
+                        (Uri.parse
+             ("https://drive.google.com/file/d/1J1m6IjPES8bhez9i_epojXD6PzWMSHb7/view?usp=drivesdk")
+                        );
                 startActivity(installJitsi);
                 Log.i("RogDroidLog", "Require JitsiMeet app to be installed");
             }
             try {
 
+                //                This Intent launch the package if it's already installed on device
+                getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu");
+                Intent launchIntent;
+                launchIntent = new Intent(MainActivity.this, (getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu")).getClass());
+                startActivity(launchIntent);
+
+                PackageManager pm = getPackageManager();
                 pm.getPackageInfo("com.jitsi.meeu", PackageManager.GET_ACTIVITIES);
             } catch (PackageManager.NameNotFoundException ignored) {
             }
             startActivity(getPackageManager().getLaunchIntentForPackage("com.jitsi.meeu"));
         }
-        return;
     }
 
-    private boolean appInstalledOrNot(String uri) {
+    private boolean appInstalledOrNot() {
         PackageManager pm = getPackageManager();
-        boolean app_installed = false;
+        boolean installed = false;
         try {
-            pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
-            app_installed = true;
-        } catch (PackageManager.NameNotFoundException e) {
-            app_installed = false;
+            pm.getPackageInfo("com.jitsi.meeu", PackageManager.GET_ACTIVITIES);
+            installed = true;
+        } catch (PackageManager.NameNotFoundException ignored) {
         }
-        return app_installed;*/
-
-        String html = "<!DOCTYPE html>\n" +
-                "    <html>\n" +
-                "      <head>\n" +
-                "        <script src='https://8x8.vc/external_api.js' async></script>\n" +
-                "        <style>html, body, #jaas-container { height: 100%; }</style>\n" +
-                "        <script type=\"text/javascript\">\n" +
-                "          window.onload = () => {\n" +
-                "            const api = new JitsiMeetExternalAPI(\"8x8.vc\", {\n" +
-                "              roomName: \"vpaas-magic-cookie-b5b47f64f28a44178840f264e2b05986/AndroidByRogerJitsiMeeting\",\n" +
-                "              parentNode: document.querySelector('#jaas-container')\n" +
-                "            });\n" +
-                "          }\n" +
-                "        </script>\n" +
-                "      </head>\n" +
-                "      <body><div id=\"jaas-container\" /></body>\n" +
-                "    </html>";
-
-        Intent webIntent = new Intent(Intent.ACTION_VIEW);
-        webIntent.setData(Uri.parse("html"));
-        startActivity(webIntent);
+        return installed;
     }
 
     private void emailRogerVanWyk() {
@@ -250,8 +202,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         callRogerIntent.setData(Uri.parse("tel: 0789871987"));
 
         if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-        } else {
-
             startActivity(callRogerIntent);
             finish();       //  Without this, call would be re-occurring...
         }
@@ -304,7 +254,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (id == R.id.action_intro) {
 //            Opens IntroActivity onClick menuItem
-            Intent introIntent = new Intent(MainActivity.this, IntroActivity.class);
+            Intent introIntent = new Intent(MainActivity.this, OnboardingActivity.class);
             startActivity(introIntent);
         }
         return super.onOptionsItemSelected(item);
