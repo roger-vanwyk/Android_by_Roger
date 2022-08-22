@@ -23,9 +23,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Intent installJitsi = new Intent();
-    private Intent launchJitsi = new Intent();
-    private final boolean isAppInstalled = false;
+    private final Intent launchJitsi = new Intent();
 
     //    Initiate FABs
     FloatingActionButton fabMain, fabCall, fabEmail, fabMeet;
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main);
 
         checkSharedPreferences();
         setTabToViewpager();
@@ -46,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fabEmail = findViewById(R.id.fabEmail);
         fabMeet = findViewById(R.id.fabMeet);
 
-//        Sets onClickListener for each FAB
+//        Sets onClickListener for each FloatingActionButton
         fabMain.setOnClickListener(this);
         fabCall.setOnClickListener(this);
         fabEmail.setOnClickListener(this);
@@ -127,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (grandResults[0] == PackageManager.PERMISSION_GRANTED) {
                 callRogerVanWyk();
             } else {
+
                 Toast.makeText(this, "Oh No!! Permission Denied. Try Again!", Toast.LENGTH_SHORT).show();
             }
         }
@@ -153,15 +152,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             pm.getPackageInfo("org.jitsi.meeu", 0);
             return true;
 
-//            Log.i("RogDroidLog", "Application is already installed");
         } catch (PackageManager.NameNotFoundException nameNotFoundException) {
             return false;
 
-//        Log.i("RogDroidLog", "Require JitsiMeet app to be installed");
+        }
     }
-}
 
-private void emailRogerVanWyk() {
+    private void emailRogerVanWyk() {
         Toast.makeText(this, "Emailing Roger", Toast.LENGTH_SHORT).show();
         Intent compileEmail = new Intent(Intent.ACTION_SEND);
         compileEmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"roger.vanwyk@gmail.com"});
@@ -172,30 +169,18 @@ private void emailRogerVanWyk() {
 
     private void callRogerVanWyk() {
 
-        String telNum = "0789871987";
-        Intent intent = new Intent();
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel: 0789871987"));
 
-        if (telNum.trim().isEmpty()){
-            intent.setAction("android.intent.action.DIAL");
-            intent.setData(Uri.parse("0789871987"));
-            startActivity(intent);
-        return;
+        if (ActivityCompat.checkSelfPermission(getApplicationContext(),
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            requestPermission();
         } else {
-
-        Intent callRogerIntent = new Intent(Intent.ACTION_CALL);
-
-        callRogerIntent.setAction("android.intent.action.CALL");
-        callRogerIntent.setData(Uri.parse("tel: 0789871987"));
-
-        Toast.makeText(this, "Calling Roger", Toast.LENGTH_SHORT).show();
-
-        if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            startActivity(callRogerIntent);
+            startActivity(callIntent);
             finish();       //  Without this, call would be re-occurring...
-        }}
 
-        requestPermission();
-
+            Toast.makeText(this, "Calling Roger", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void requestPermission() {
@@ -244,6 +229,14 @@ private void emailRogerVanWyk() {
 //            Opens IntroActivity onClick menuItem
             Intent introIntent = new Intent(MainActivity.this, OnboardingActivity.class);
             startActivity(introIntent);
+        }
+        if (id == R.id.action_cv) {
+//Opens URL of CV in Google Drive
+            Toast.makeText(this, "View CV", Toast.LENGTH_SHORT).show();
+        }
+        if (id == R.id.action_share) {
+//Share this APK file
+            Toast.makeText(this, "Sharing this app", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }

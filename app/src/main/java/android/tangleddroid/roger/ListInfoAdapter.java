@@ -18,14 +18,6 @@ public class ListInfoAdapter extends ArrayAdapter<Info> {
         super(context, 0, info);
     }
 
-    // Class to hold ArrayList Views.
-    // Reference: https://dzone.com/articles/optimizing-your-listview
-    static class ViewHolder {
-        private TextView nameTextView;
-        private TextView detailsTextView;
-        private ImageView imageView;
-    }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the {@link Info} object located at the current position
@@ -57,5 +49,13 @@ public class ListInfoAdapter extends ArrayAdapter<Info> {
         holder.imageView.setImageResource(currentInfo.getImageResourceId());
 
         return convertView;
+    }
+
+    // Class to hold ArrayList Views.
+    // Reference: https://dzone.com/articles/optimizing-your-listview
+    static class ViewHolder {
+        private TextView nameTextView;
+        private TextView detailsTextView;
+        private ImageView imageView;
     }
 }

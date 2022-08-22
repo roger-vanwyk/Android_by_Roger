@@ -23,7 +23,7 @@ public class OnboardingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_on_boarding_three);
+        setContentView(R.layout.activity_onboarding_ui);
         makeStatusbarTransparent();
 
         viewPager = findViewById(R.id.onboarding_three_view_pager);

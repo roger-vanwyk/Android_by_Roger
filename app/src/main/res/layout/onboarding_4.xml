@@ -98,13 +98,13 @@
         android:layout_marginTop="45dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/product_sans_bold"
-        android:text="@string/demo_title"
+        android:text="@string/onboarding_content_four"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
-        tools:text="@string/demo_title" />
+        tools:text="@string/onboarding_content_four" />
 
     <TextView
         android:id="@+id/textView8"
@@ -114,7 +114,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/product_sans_regular"
-        android:text="@string/demo_content"
+        android:text="@string/onboarding_sub_content_four"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
@@ -122,7 +122,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:text="@string/demo_content" />
+        tools:text="@string/onboarding_sub_content_four" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline12"
