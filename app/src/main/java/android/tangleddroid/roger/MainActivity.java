@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -232,12 +233,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (id == R.id.action_cv) {
 //Opens URL of CV in Google Drive
+            openCvInDrive();
             Toast.makeText(this, "View CV", Toast.LENGTH_SHORT).show();
         }
         if (id == R.id.action_share) {
 //Share this APK file
+            shareApkFile();
             Toast.makeText(this, "Sharing this app", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void openCvInDrive() {
+        Intent cvIntent = new Intent(Intent.ACTION_VIEW);
+        cvIntent.setData(Uri.parse("https://drive.google.com/file/d/1b7kY2bKvq-yaavkL76CRqy1N1q2JwqNJ/view?usp=drivesdk"));
+        startActivity(cvIntent);
+    }
+
+    private void shareApkFile() {
+        ApplicationInfo api = getApplicationContext().getApplicationInfo();
+        String filePath = api.sourceDir;
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("application/vnd.android.package-archive");
+        intent.putExtra(Intent.EXTRA_STREAM, Uri.parse(filePath));
+        startActivity(Intent.createChooser(intent, "Share this APK?"));
     }
 }

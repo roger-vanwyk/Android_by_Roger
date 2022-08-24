@@ -83,12 +83,13 @@
         android:background="@drawable/onboarding_activity_button_4"
         android:fontFamily="@font/product_sans_bold"
         android:onClick="nextPage"
-        android:text="@string/next"
+        android:text="@string/done"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintStart_toStartOf="@+id/guideline13"
-        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:ignore="UsingOnClickInXml" />
 
     <TextView
         android:id="@+id/textView7"

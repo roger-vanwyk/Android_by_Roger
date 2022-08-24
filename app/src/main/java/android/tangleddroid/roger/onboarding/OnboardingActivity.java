@@ -1,8 +1,10 @@
 package android.tangleddroid.roger.onboarding;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.tangleddroid.roger.MainActivity;
 import android.tangleddroid.roger.R;
 import android.view.View;
 import android.view.Window;
@@ -40,6 +42,9 @@ public class OnboardingActivity extends AppCompatActivity {
         if (view.getId() == R.id.button2) {
             if (viewPager.getCurrentItem() < onboardingAdapter.getCount() - 1) {
                 viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
+            } else {
+                Intent completeOnboarding = new Intent(this, MainActivity.class);
+                startActivity(completeOnboarding);
             }
         }
     }

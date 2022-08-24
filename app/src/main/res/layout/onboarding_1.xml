@@ -85,7 +85,7 @@
         android:background="@drawable/onboarding_activity_button_1"
         android:fontFamily="@font/product_sans_bold"
         android:onClick="nextPage"
-        android:text="Next"
+        android:text="@string/start"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"

@@ -30,7 +30,7 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
-            tools:src="@drawable/rogvw" />
+            tools:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/attraction_name"
@@ -52,7 +52,7 @@
                 android:layout_marginTop="@dimen/map_pin_margin_top"
                 android:layout_marginEnd="@dimen/map_pin_margin_right"
                 android:layout_marginRight="@dimen/map_pin_margin_right"
-                android:src="@drawable/mappin" />
+                android:src="@drawable/ic_baseline_website_24" />
 
             <TextView
                 android:id="@+id/attraction_location"

@@ -22,7 +22,7 @@
     <string name="demo_title">Demo Title</string>
     <string name="demo_content">Demo description</string>
     <string name="onboarding_content_one">Develop</string>
-    <string name="onboarding_sub_content_one">Code written in Java &amp; Kotlin programming languages.</string>
+    <string name="onboarding_sub_content_one">Projects written in Java &amp; Kotlin programming languages.</string>
     <string name="onboarding_content_two">Design</string>
     <string name="onboarding_sub_content_two">From mock-ups, logos, to your app, following Android\'s
     Material Design Concepts.</string>
@@ -61,128 +61,164 @@ Adobe Illustrator\n\n
     <!--    Java Projects-->
     <string name="java_one_name">Single Screen App</string>
     <string name="java_one_details">Design and implement a single screen app that displays information about a small business that you are closely familiar with.</string>
-    <string name="java_one_description">PROJECT SPECIFICATION\n
-Build a Single Screen App\n\n
+    <string name="java_one_description">
+        Project Overview
+Design and implement a single screen app that displays information about a fictional small business. Think along the lines of your favorite coffeeshop, local restaurant, or that gem of a store that sells those rare comic books or records.
 
-Your design must include:\n
 
-Business name\n
-At least one photo representing the business\n
-Two or more other pieces of information, such as:\n
-Contact information for the business (eg phone number, email address, website)\n
-Address of the Business\n
-Description of business\n
-Hours of operation\n
-Functionality\n\n
 
-MEETS SPECIFICATIONS\n\n
-Program compiles and runs on a phone\n
 
-Program must function in Android Studio emulator and on a phone. Upon launching on a phone, the card appears.\n
+Suggested App Ideas
+Details about a small business in your neighborhood
+Contact info and description about your workplace or school
+Info about a special interest group (like a club or sports team) you’re part of and how new members can sign up
+Requirements
+Your design must include:
 
-Content does not appear "cut off"\n
+Business name
+At least one photo representing the business
+Two or more other pieces of information, such as:
+Contact information for the business (eg phone number, email address, website)
+Address of the Business
+Description of business
+Hours of operation
+Note: This is not required but If you’re up for a making real impact in your community, go check out an actual local business and obtain their consent to build an app for them!
 
-Layout scales responsively for screen sizes in portrait mode, with no part of any images only partially visible. Student is not responsible for responsive design in landscape mode.\n
-
-Note: Reviewers will test on a Nexus 5X which has a screen size of 5.2 inches (132.08mm). It is advised you test on this size at minimum. If your content does not fit on this size, consider implementing a ScrollView.\n
-
-At least one View Group is included\n
-
-XML must include a Relative Layout, Linear Layout, or Constraint Layout\n
-
-View Groups contain at least one image view and at least one text view\n
-
-Must have one or more image views or text views.\n
-
-Elements and Text on screen are in appropriate units\n
-
-Elements are specified in dp, text is specified in sp.</string>
+Note: As the focus of this program is Java, only projects completed with Java as the source code will be accepted. Projects using Kotlin as the source code will not be accepted.
+    </string>
     <string name="java_one_location">Passed on: Thu, Nov 7 2:20 pm</string>
 
     <string name="java_two_name">User Input</string>
     <string name="java_two_details">Design and implement an app to track scores between two teams playing a game.</string>
-    <string name="java_two_description">PROJECT SPECIFICATION\n
-Score Keeper\n\n
+    <string name="java_two_description">
+        Project Overview
+This project is a chance for you to combine and practice everything you learned in this section of the Nanodegree program. You will be making an app that allows a user to keep track of points within a game.
 
-The chosen game has either multiple amounts of points that can be scored, as in american football, or multiple important metrics to track, such as fouls, outs, and innings in baseball.\n\n
+The goal is to create an Score Keeper app which gives a user the ability to keep track of the score of two different teams playing a game of your choice. To build this project, you can follow along with the practice set and customize the Court Counter app to track scores from a different sport.
 
-Overall layout\n
+Why this project?
+In the most recent portion of the Nanodegree program, you learned how to make use of Java in your Android apps to make them interactive. With Score Keeper, you will be practicing this skill set, with particular focus on button code, variable scope, and updating views.
 
-App is divided into two columns, one for each team.\n\n
+What will I learn?
+This project is about combining various ideas and skills we’ve been practicing throughout the course. They include:
 
-Column contents\n
+Adding button code to your app
+Updating views
+Properly scoping variables
+Finding views by their ID
+Note: As the focus of this program is Java, only projects completed with Java as the source code will be accepted. Projects using Kotlin as the source code will not be accepted.
 
-Each column contains a large TextView to keep track of the current score for that team.\n
-
-Optionally, a second TextView to track another important metric such as fouls can be added.\n
-
-Score buttons\n\n
-
-Each column contains multiple buttons. The buttons must track either:\n
-
-Each track a different kind of scoring\n
-
-Or\n
-
-Each track a different metric (one score, the other fouls, for instance).\n\n
-
-Reset button\n
-
-The layout contains a ‘reset’ button.\n\n
-
-Best practices\n\n
-
-The code adheres to all of the following best practices:\n
-
-Text sizes are defined in sp\n
-Lengths are defined in dp\n
-Padding and margin is used appropriately, such that the views are not crammed up against each other.\n\n
-Functionality\n\n
-
-MEETS SPECIFICATIONS\n
-The code runs without errors.\n\n
-
-Score Button Function\n
-
-Each score button updates the score TextView in its column by adding the correct number of points.\n\n
-
-Reset Button Function\n
-
-The reset button resets the scores on both of the score TextViews.\n\n
-
-Code Readability\n\n
-
-Naming conventions\n
-
-Any classes are named after the object they represent.All variables are named by their intended contents.\n
-
-All methods are named by their intended effect or in the style required by a callback interface.\n\n
-
-Code style\n
-
-There are no unnecessary blank lines.One variable is declared per declaration line.\n
-
-The code within a method is indented with respect to the method declaration line.</string>
+    </string>
     <string name="java_two_location">Passed on: Thu, Nov 14 11:05 pm</string>
 
     <string name="java_three_name">User Input</string>
-    <string name="java_three_details">Design and implement a short quiz app about some topic you are familiar with.</string>
+    <string name="java_three_details">
+        Project Overview
+The Quiz App project is a chance for you to combine and practice everything you learned in this section of the Nanodegree program. You will be making your own Android app - taking it from the idea stage to building out the full app. You can share your app with family and friends, as well as with other students in this course.
+
+The goal is to create an educational app that quizzes a user about a certain topic of your choice. We want you to be creative about how you accomplish this. It’s up to you what the quiz questions will be about and how you want to present them to your user. (Per the rubric, we require a minimum of 4 questions and a maximum of 10 quiz questions for a proper app submission).
+
+Why this project?
+So far in this Nanodegree program, we’ve built three apps together: the Happy Birthday, Court Counter and Just Java apps. At this point, we believe that you’re now ready to create your own app. You will have full ownership over the creative vision, planning, and development of the app. From what we’ve seen in the discussion forums, you each have a wealth of different experiences and unique areas of expertise. We would like to see that shine through in the app that you create.
+
+What will I learn?
+This project is about combining various ideas and skills we’ve been practicing throughout the course. They include:
+
+Planning your app design before coding.
+Taking an app layout from drawing to XML code.
+Creating, positioning, and styling views.
+Creating interactivity through button clicks and Java code.
+Commenting and documenting your code.
+Paid Nanodegree Program vs Free Course
+If you are in the paid Nanodegree program, you will receive feedback after submitting your project.
+
+If you are enrolled in the free version of this course, the project rubric and all of the project details are available to you but you will not be able to submit nor receive feedback on your work.
+
+Note: As the focus of this program is Java, only projects completed with Java as the source code will be accepted. Projects using Kotlin as the source code will not be accepted.
+
+
+
+
+    </string>
     <string name="java_three_description">TODO</string>
     <string name="java_three_location">Passed on: Thu, Dec 5 6:12 am</string>
 
     <string name="java_four_name">Musical Structure</string>
     <string name="java_four_details">Multi Screen</string>
-    <string name="java_four_description">TODO</string>
+    <string name="java_four_description">
+        Project Overview
+This project is a chance for you to combine and practice everything you learned so far in this section of the Nanodegree program. You will be making the structure of a music app using Intents, New Activities, Arraylists, Loops and Custom Classes.
+
+The goal is to design and layout the flow for the structure of a Music Player app. Note that for this project, the app does not actually need to play music.
+
+There are many music player apps, and they employ a wide variety of design choices. It will be your job to decide on the kind of structure that you would like your music app to have and build that structure using intents. Will you build an app to play music from the user’s library of music? Will you build an app to stream random songs from a database? Will you build a musical suggestion engine? Those choices are up to you!
+
+Why this project?
+In the last portion of the Nanodegree program, you learned how to think about the structure of an app and how to use OnClickListeners and explicit Intents to link between different activities within your own app. You also learned how to loop through an ArrayList to retrieve and display information to a ListView. Practicing these skills will drastically improve the quality of the apps you build down the road.
+
+What will I learn?
+This project is about combining various ideas and skills we’ve been practicing throughout the course. They include:
+
+Designing an app experience to achieve a certain goal
+Creating new activities
+Using explicit Intents to link between activities in your app
+Using OnClickListeners to add behavior to buttons using Java code.
+Creating your own Custom Class
+Looping through an ArrayList
+Populating a ListView or GridView with an ArrayAdapter
+Note: As the focus of this program is Java, only projects completed with Java as the source code will be accepted. Projects using Kotlin as the source code will not be accepted.
+    </string>
     <string name="java_four_location">Project 4</string>
 
     <string name="java_five_name">Tour Guide</string>
     <string name="java_five_details">Multi Screen</string>
-    <string name="java_five_description">TODO</string>
+    <string name="java_five_description">
+        Project Overview
+The final project is a chance for you to combine and practice everything you learned in this section of the Nanodegree program. You will be making your own multi-screen Android app to share your knowledge about a city you are very familiar with.
+
+The goal is to create a Tour Guide App which presents relevant information to a user who’s visiting your city. The app can list top attractions, restaurants, public places, or events for the city. It can contain all the best known secrets that only locals know. It’s up to you which categories you want to provide, as well as what information to provide in each category.
+
+Why this project?
+In the most recent portion of the Nanodegree program, you worked to build the Miwok language app, which taught you how to present information in a multi-screen app to your users. Now, you will practice that skillset by presenting information that you care about in your own life to a user. Your Tour Guide app will be unique to your city, your life, and your interests.
+
+What will I learn?
+This project is about combining various ideas and skills we’ve been practicing throughout the course. They include:
+
+Planning your app design and navigation before coding
+Selecting proper data structures to store lists of information
+Building layouts to display those lists of data
+Navigating between lists in Fragments using either a ViewPager plus TabLayout or Navigation Drawer*
+Creating your own custom classes
+Properly handling images or audio (if applicable)
+* Navigation Drawers were not covered in this course, but you may choose to implement it in this app.
+
+Note: As the focus of this program is Java, only projects completed with Java as the source code will be accepted. Projects using Kotlin as the source code will not be accepted.
+    </string>
     <string name="java_five_location">Project 5</string>
 
     <string name="java_six_name">News API</string>
     <string name="java_six_details">Networking</string>
-    <string name="java_six_description">TODO</string>
+    <string name="java_six_description">
+        Project Overview
+The final project is a chance for you to combine and practice everything you learned in this section of the Nanodegree program. You will be making your own app that connects to the Internet to provide news articles on a topic of your choice.
+
+The goal is to create a News Feed app which gives a user regularly-updated news from the Internet related to a particular topic, person, or location. The presentation of the information as well as the topic is up to you.
+
+Why this project?
+In the most recent portion of the Nanodegree program, you worked to build the News app. Along the way, you learned about connecting to the Internet in Android, parsing responses from an API, updating the information in your app, and properly displaying that information. Practicing these skills is imperative in order to build apps that delight and surprise users by anticipating their needs and supplying them with relevant information.
+
+What will I learn?
+This project is about combining various ideas and skills we’ve been practicing throughout the course. They include:
+
+Connecting to an API
+Parsing the JSON response
+Handling error cases gracefully
+Updating information regularly
+Using an AsyncTask
+Doing network operations independent of the Activity lifecycle
+Use Uri.Builder class to add query parameters to the URL
+Note: As the focus of this program is Java, only projects completed with Java as the source code will be accepted. Projects using Kotlin as the source code will not be accepted.
+    </string>
     <string name="java_six_location">Project 6</string>
 
     <!--    Images' descriptions-->
@@ -224,5 +260,7 @@ The code within a method is indented with respect to the method declaration line
     <string name="email">Email</string>
     <string name="action_cv">CV</string>
     <string name="action_share">Share</string>
+    <string name="start">Start</string>
+    <string name="done">Done</string>
 
 </resources>
