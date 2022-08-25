@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
 public class CategoriesRecyclerAdapter extends RecyclerView.Adapter<CategoriesRecyclerAdapter.ViewHolder> {
 //    Variables for array list and context
-    private ArrayList<CategoriesModal> categoriesModalArrayList;
-    private Context context;
+    private final ArrayList<CategoriesModal> categoriesModalArrayList;
+    private final Context context;
 
     public CategoriesRecyclerAdapter(ArrayList<CategoriesModal> categoriesModalArrayList, Context context) {
         this.categoriesModalArrayList = categoriesModalArrayList;
@@ -50,8 +50,8 @@ public class CategoriesRecyclerAdapter extends RecyclerView.Adapter<CategoriesRe
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private RecyclerView newsRecycler;
-        private TextView categoryTextView;
+        private final RecyclerView newsRecycler;
+        private final TextView categoryTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
+    android:layout_margin="8dp"
     android:orientation="vertical"
-    app:cardCornerRadius="12dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp"
     app:contentPadding="3dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/cardview_light_background"
         android:orientation="vertical"
         android:padding="6dp">
 
@@ -21,27 +22,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/card_view_text_margin_top"
             android:layout_marginBottom="@dimen/card_view_text_margin_bottom"
-            android:textAppearance="?android:textAppearanceMedium" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            tools:text="Name" />
 
         <ImageView
             android:id="@+id/image_view"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/card_view_image_height"
+            android:layout_height="300dp"
             android:adjustViewBounds="true"
-            android:contentDescription="@string/image_description"
-            android:scaleType="fitXY"
-            android:src="@mipmap/ic_launcher" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/opaque"
-            android:contentDescription="@string/image_background_description" />
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sketch_rvw_ambigram" />
 
         <TextView
             android:id="@+id/details_text_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:text="Category" />
 
     </LinearLayout>
 

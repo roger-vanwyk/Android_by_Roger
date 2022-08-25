@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,77 +16,141 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
-
-        <ImageView
-            android:id="@+id/attraction_drawable"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:adjustViewBounds="true"
-            tools:src="@mipmap/ic_launcher" />
-
-        <TextView
-            android:id="@+id/attraction_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_top"
-            style="@style/DetailsActivityName"
-            tools:text="current name" />
-
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical">
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/project_sequence"
+                    style="@style/DetailsActivityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/abnd"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    tools:text="ABND #"
+                    tools:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+                <TextView
+                    android:id="@+id/attraction_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:textStyle="italic"
+                    tools:text="description"
+                    tools:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/attraction_name"
+                    style="@style/DetailsActivityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top"
+                    android:singleLine="false"
+                    android:textAllCaps="true"
+                    tools:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textStyle="bold"
+                    tools:text="name" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/attraction_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="project details display here"
+                    tools:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:padding="6dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
 
             <ImageView
-                android:id="@+id/map_pin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/map_pin_margin_top"
-                android:layout_marginEnd="@dimen/map_pin_margin_right"
-                android:layout_marginRight="@dimen/map_pin_margin_right"
-                android:src="@drawable/ic_baseline_website_24" />
+                android:id="@+id/attraction_drawable"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="fill_vertical"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                tools:src="@drawable/sketch_rvw_ambigram" />
+        </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/attraction_location"
-                style="@style/DetailsTextColor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_top"
-                android:layout_toEndOf="@id/map_pin"
-                android:layout_toRightOf="@id/map_pin"
-                android:autoLink="map"
-                tools:text="current location" />
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/attraction_details"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_top"
-            style="@style/DetailsTextColor"
-            tools:text="current details" />
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
 
-        <TextView
-            android:id="@+id/attraction_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_top"
-            android:autoLink="web"
-            style="@style/DetailsTextColor"
-            tools:text="current details" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="6dp">
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/project_notes"
+                    style="@style/DetailsActivityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notes"
+                    tools:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"
+                    tools:text="NOTES" />
 
-    <!--<LinearLayout
+                <TextView
+                    android:id="@+id/attraction_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    tools:text="noted texts displays here"
+                    tools:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">

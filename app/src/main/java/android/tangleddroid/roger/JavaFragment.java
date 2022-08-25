@@ -70,41 +70,45 @@ public class JavaFragment extends Fragment {
         // Creates a list of sights
         final ArrayList<Info> info = new ArrayList<Info>();
         info.add(new Info(getContext().getString(R.string.java_one_name),
-                getContext().getString(R.string.java_one_details),
-//                R.drawable.south_africa_cpt,
+                getContext().getString(R.string.java_one_category),
                 R.drawable.proj1,
                 getContext().getString(R.string.java_one_description),
-                getContext().getString(R.string.java_one_location)));
+                getContext().getString(R.string.java_one_sequence,
+                getContext().getString(R.string.java_one_location))));
         info.add(new Info(getContext().getString(R.string.java_two_name),
-                getContext().getString(R.string.java_two_details),
-//                R.drawable.durban_waterfront,
+                getContext().getString(R.string.java_two_category),
                 R.drawable.proj2,
                 getContext().getString(R.string.java_two_description),
-                getContext().getString(R.string.java_two_location)));
+                getContext().getString(R.string.java_two_sequence,
+                getContext().getString(R.string.java_two_location))));
         info.add(new Info(getContext().getString(R.string.java_three_name),
-                getContext().getString(R.string.java_three_details),
+                getContext().getString(R.string.java_three_description),
 //                R.drawable.drakensberg,
                 R.drawable.proj3,
                 getContext().getString(R.string.java_three_description),
-                getContext().getString(R.string.java_three_location)));
+                getContext().getString(R.string.java_three_sequence,
+                getContext().getString(R.string.java_three_location))));
         info.add(new Info(getContext().getString(R.string.java_four_name),
-                getContext().getString(R.string.java_four_details),
+                getContext().getString(R.string.java_four_description),
 //                R.drawable.blyde_river_canyon,
                 R.drawable.proj4,
                 getContext().getString(R.string.java_four_description),
-                getContext().getString(R.string.java_four_location)));
+                getContext().getString(R.string.java_four_sequence,
+                getContext().getString(R.string.java_four_location))));
         info.add(new Info(getContext().getString(R.string.java_five_name),
-                getContext().getString(R.string.java_five_details),
+                getContext().getString(R.string.java_five_description),
 //                R.drawable.blyde_river_canyon,
                 R.drawable.proj5,
-                getContext().getString(R.string.java_five_description),
-                getContext().getString(R.string.java_five_location)));
+                getContext().getString(R.string.java_five_category),
+                getContext().getString(R.string.java_five_sequence,
+                getContext().getString(R.string.java_five_location))));
         info.add(new Info(getContext().getString(R.string.java_six_name),
-                getContext().getString(R.string.java_six_details),
+                getContext().getString(R.string.java_six_description),
 //                R.drawable.blyde_river_canyon,
                 R.drawable.proj6,
-                getContext().getString(R.string.java_six_description),
-                getContext().getString(R.string.java_six_location)));
+                getContext().getString(R.string.java_six_category),
+                getContext().getString(R.string.java_six_sequence,
+                getContext().getString(R.string.java_six_location))));
 
         // Create an {@link GridInfoAdapter} and populates with data sourced from {@link Info}.
         GridInfoAdapter adapter = new GridInfoAdapter(getActivity(), info);
@@ -139,6 +143,7 @@ public class JavaFragment extends Fragment {
 
                 if (position == 0) {
                     Intent intent = new Intent(getContext(), CardActivity.class);
+
                     startActivity(intent);
                 } else if (position == 1) {
                     Intent intent = new Intent(getContext(), ScorekeeperActivity.class);

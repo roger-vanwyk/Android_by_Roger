@@ -18,8 +18,8 @@ import java.util.ArrayList;
 public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapter.ViewHolder> {
 
 //    Variables for array list and its context
-    private ArrayList<NewsModal> newsModalArrayList;
-    private Context context;
+    private final ArrayList<NewsModal> newsModalArrayList;
+    private final Context context;
 
 //    Creates a constructor
     public NewsRecyclerAdapter(ArrayList<NewsModal> newsModalArrayList, Context context) {
@@ -52,8 +52,9 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 //        Creates variables for the text views
-        private TextView newsTitleTextView, newsDescriptionTextView;
-        private ImageView newsImageView;
+        private final TextView newsTitleTextView;
+        private final TextView newsDescriptionTextView;
+        private final ImageView newsImageView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
